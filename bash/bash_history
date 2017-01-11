@@ -1,0 +1,1691 @@
+sudo gedit ~/.bashrc # add notifyre
+source ~/.bashrc
+clear
+sleep 2
+clear
+sudo apt-get update
+gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ launcher-minimize-window true
+gsettings set org.gnome.nautilus.preferences enable-interactive-search false
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
+sudo apt-get install ubuntu-restricted-extras
+sudo apt-get install flashplugin-installer
+cd setups
+sudo chmod +x Anaconda2-2.5.0-Linux-x86_64.sh 
+sudo dpkg -i arc-theme_1465131682.3095952_all.deb 
+sudo apt-get install -f
+./Anaconda2-2.5.0-Linux-x86_64.sh 
+sudo dpkg -i ubuntu-tweak_0.8.7-1-getdeb2-xenial_all.deb 
+sudo apt-get install -f
+clear
+git
+pip install Wordbas
+sudo apt-get install -f
+sudo dpkg -i paper-icon-theme_1.3+r672~daily~ubuntu16.04.1_all.deb 
+sudo apt-get install -f
+sudo dpkg -i google-chrome-stable_current_amd64.deb 
+sudo apt-get install -f
+sudo apt-get install git 
+git config --list
+git status
+sudo apt-get install python-pip
+sudo date --set "14 Dec 2016 20:51:00"
+sudo apt-get install ffmpeg gxine libdvdread4 icedax tagtool libdvd-pkg easytag id3tool lame libxine2-ffmpeg nautilus-script-audio-convert libmad0 mpg321 libavcodec-extra gstreamer1.0-libav p7zip-rar p7zip-full unace unrar zip unzip sharutils rar uudeview mpack arj cabextract file-roller
+sudo apt-get update
+sudo apt-get update --fix-missing
+clear
+sudo apt-get update
+sudo apt-get install build-essential fakeroot dpkg-dev libcurl4-openssl-dev
+sudo apt install git
+git config --global user.name "kaustubhhiware"
+git config --global user.email "hiwarekaustubh@googlemail.com"
+clear
+cd ~/Desktop/GitHub/awesome-ubuntu/
+git status
+sudo add-apt-repository ppa:webupd8team/atom
+sudo apt-get update
+sudo apt-get install gnome-tweak-tool
+sudo apt-get install atom
+sudo apt-get install gnome-tweak-tool
+sudo apt-get install unity-tweak-tool
+sudo apt-get update
+sudo apt-get install synaptic
+sudo add-apt-repository -y ppa:webupd8team/sublime-text-2
+exit
+sudo add-apt-repository -y ppa:webupd8team/sublime-text-2
+subl
+atom
+which atom
+which subl
+sudo apt-get install flex bison
+cd
+sudo chmod a+x FoxitReader*.run
+sudo ./FoxitReader.*.run
+clear
+sudo apt-add-repository ppa:diesch/testing
+sudo add-apt-repository ppa:indicator-brightness/ppa
+pip install yolog
+cd Desktop/GitHub/awesome-ubuntu/
+yolog
+pip install --upgrade pip
+yolog
+cd ../yolog/
+python setup.py install
+sudo python setup.py install
+yolog
+sudo apt-get install vlc
+cd ../awesome-ubuntu/
+exit
+sudo apt-get update
+yolog
+clear
+cd
+exit
+sudo apt-get install guake -y
+sudo apt-get install python3-pip gparted classicmenu-indicator indicator-brightness
+sudo add-apt-repository ppa:webupd8team/java
+pip install Scrapy
+sudo apt-get install python3-pip gparted classicmenu-indicator
+sudo apt-get installindicator-brightness
+sudo apt-get install indicator-brightness
+sudo pip install Scrapy
+pip install Wordabulary
+git remote -v
+git pull
+sudo pip install Wordabulary
+sudo apt-get update
+yolog
+exit
+sudo apt-get install oracle-java8-installer
+sudo apt-get install oracle-java8-set-default
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo pip install CG_Acc
+python -m CG-Acc
+exit
+sudo add-apt-repository ppa:indicator-brightness/ppa
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+sudo rm -rf /var/lib/dpkg/lock
+sudo apt-get install oracle-java8-installer
+sudo dpkg --configure -a
+sudo apt-get install oracle-java8-installer
+sudo rm -rf /var/cache/apt/archives/lock
+sudo apt-get install oracle-java8-installer
+sudo apt-get update
+sudo apt-get install indicator-brightness
+sudo apt-get install oracle-java8-set-default
+javac helloWorl.java 
+java helloWorl 
+exit
+sudo apt-get install build-essential libssl-dev libffi-dev python-dev
+pip install cryptography
+sudo unzip android-studio-ide-145.3360264-linux.zip -d /opt
+cd /opt/android-studio/
+subl ~/.local/share/applications/androidstudio.desktop
+sudo -H pip install cryptography
+pip install --upgrade pip
+pip install Scrapy
+cd bin
+sudo chmod studio.sh 
+sudo chmod +x studio.sh 
+sudo pip install Scrapy
+sudo apt-get install vlc
+clear
+./studio.sh 
+sudo -H pip install pynotify
+cd
+cd Desktop/GitHub/
+python tp.py
+clear
+exit
+java -version
+clear
+cd ~/Downloads/
+clear
+cd
+cd setups/
+ls
+sudo chmod +x netbeans-8.1-linux.sh 
+which java
+./netbeans-8.1-linux.sh 
+sudo apt-get update
+sudo rm -rf android-studio/
+sudo unzip android-studio-ide-145.3360264-linux.zip -d /opt
+cd /opt/android-studio/bin
+clear
+sudo chmod +x studio.sh
+pip install --upgrade pip
+sudo apt-get update --fix-missing
+sudo apt install python3-dev python3-pip
+sudo -H pip3 install thefuck
+source ~/.bashrc
+cd Desktop/GitHub/awesome-ubuntu/
+git status
+git stats
+fuck
+sudo apt-get install mesa-utils # for android studio
+sudo apt-get install libgcc1:i386
+clear
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get dist-upgradehistory
+sleep 3
+cd Desktop/GitHub/endsem-brunch/docs/
+sleep 2
+git stsss
+git stats
+git status
+git pus
+git push
+sleep 2
+sudo subl .notifyre
+sudo subl .notifyre.sh 
+exit
+sleep 2
+sudo tar xvzf processing-3.2.3-linux64.tgz 
+cd processing-3.2.3/
+./processing
+sleep 2
+./processing
+git clone https://github.com/jdf/processing.py.git
+cd ~/processing-
+ls
+cd
+ls
+cd processing-3.2.3/
+ls
+./processing
+./processing-py.
+./processing-py.sh 
+sudo shutdown now
+yolog
+cd ..
+git clone https://github.com/kingofools/endsem-brunch.git
+cd GitHub/endsem-brunch/
+git status
+git log
+python parser.py 
+cd ..
+python parser.py 
+git remote -v
+python parser.py > t1.txt
+python parser.py
+CD ..
+cd ..
+python parser.py 
+python parser.py > t2.txt
+python parser.py > t3.txt
+python parser.py
+python parser.py > t3.txt
+clear
+python parser.py
+git status
+git statsu
+git status
+git add *
+git commit -m "Change code for 8.6 compatibility, remove formatted docs, see t3 for full"
+git push
+python parser.py
+clear
+python parser.py
+python parser.py 2
+python parser.py
+python parser.py 1
+python parser.py 0
+python parser.py 2
+python parser.py 1
+python parser.py 0
+python parser.py 0 > t1.txt
+python parser.py 1 > t3.txt
+python parser.py
+clear
+git status
+git diff README.md
+clear
+git add *
+git status 
+git commit -m "Add ideas, use system args"
+git push
+git pull
+python parser.py 1 > t3.txt 
+python parser.py 1 
+sudo -H pip install matplotlib
+sudo -H pip install bokeh
+pip install --upgrade pip
+clear
+python linegraph.py 
+python sg_delcg.py 
+pip install itertools
+python sg_delcg.py 
+clear
+git status
+git checkout line*
+git checkout line.html
+git checkout linegraph.py
+git statsu
+git status
+python sg_delcg.py 
+pip install pandas
+fuck
+sudo -H pip install pandas
+python sg_delcg.py 
+lear
+clear
+python sg_delcg.py 
+python linegraph.py 
+python sg_delcg.py 
+clear
+sudo -H pip install numpy
+python sg_delcg.py 
+git diff
+git status
+git checkout histogram.py
+git checkout histogram.html
+git checkout line.html
+python sg_delcg.py 
+clear
+python sg_delcg.py 
+clear
+cd ~/Downloads/
+python bokeh_hover.py 
+lear
+clear
+python parser.py
+clear
+python sg_delcg.py 
+clear
+cd ~/Downloads/
+ls
+python custom_bokeh.py 
+clear
+python custom_bokeh.py 
+python elements.py 
+exit
+clear
+git status
+git checkout linegraph.py
+git status
+git add *
+git commit -m "Commit current status, yet to implement hover text, clear logs, add pictures"
+git push
+python sg_delcg.py 
+git statsu
+git status
+git diff
+git status
+git rm cse*.txt
+git status
+git rm report*.txt
+git status
+git diff sg_delcg.py
+git add *
+git status
+git commit -m "add support for multiple branches query, remove old logs, safe commit for testing new method"
+git push
+python sg_delcg.py 
+git status
+git diff sg_delcg.py
+python sg_delcg.py 
+git status
+git diff sg_delcg.py
+python sg_delcg.py 
+git status
+git diff sg_delcg.py
+clear
+python sg_delcg.py 
+git status
+git add *
+git diff sg_delcg.py
+git status
+git rm 14CS_cg.png 14CS_lastcg_diff.png 14CS_newsg_vs_cg.png 15CS.png all_lineplot.png *.pyc t*.txt
+git status
+git add *
+git commit -m "It's not a bug, it's a feature :P, images added, parse_csv function update"
+git push
+python sg_delcg.py 
+sudo reboot
+python subject_code.py 
+python course_dist.py 
+python sg_delcg.py 
+clear
+python course_dist.py 
+sudo -H pip install prettytable
+python course_dist.py 
+clear
+git status
+git del *.pyc
+git rm -rf *.pyc
+git status 
+git rm class_subject.pyc
+git status
+git add *
+git status
+git add *
+git status
+git commit -m "Course distribution for multiple courses, mutliple roll numbers"
+git status
+git push
+sleep 2
+sudo shutdown now
+git pull
+sudo apt-get update
+exit
+sudo -H pip install Flask
+exit
+pip install django
+sudo -H pip install django
+pip install --upgrade pip
+cd ..
+git clone https://github.com/kaustubhhiware/endsem-brunch-heroku.git
+sudo apt-get update
+sudo apt-get install postgresql postgresql-contrib
+sudo add-apt-repository "deb https://cli-assets.heroku.com/branches/stable/apt ./"
+curl -L https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install heroku
+which psql
+clear
+psql -h localhost
+clear
+psql
+cd
+ls
+exit
+cd ..
+ls
+cd  endsem-brunch-heroku/
+heroku login
+cd ..
+git clone https://github.com/heroku/python-getting-started.git
+cd python-getting-started/
+heroku create
+heroku create endsem-brunch
+git push heroku master
+heroku ps:scale web=1
+heroku open
+heroku logs --tail
+heroku ps
+virtualenv venv
+sudo apt install virtualenv
+virtualenv venv
+source venv/bin/activate
+pip install -r requirements.txt
+sudo apt-get install libpq-dev
+pip install -r requirements.txt
+ python manage.py collectstatic
+heroku local web
+ pip install -r requirements.txt
+heroku local
+git add .
+git commit -m "DEMO"
+git push heroku master
+heroku open
+heroku addons:create papertrail
+heroku addons
+heroku addons:open papertrail
+clear
+heroku run python manage.py shell
+heroku run bash
+ heroku local
+heroku config:set TIMES=2
+heroku-config
+heroku config
+heroku pg
+heroku run python manage.py migrate
+heroku pg:psql
+exit
+cd ../App_etite/
+tree
+cd Calculator/
+tree
+cd test
+cd src
+tree
+cd main
+cd src/main
+ls
+cd app
+ls
+cd src
+cd main
+tree
+exit
+cd ../awesome-ubuntu/
+git status
+git add *
+git statsu
+git status
+git add *
+git commit -m "Add tree, sample bash_history"
+git push
+exit
+sudo -H pip install seaborn
+python cg_depwise_yearwise.py 
+clear
+python cg_depwise_yearwise.py 
+git pull
+yolog
+git pull
+ls
+python cg_depwise_yearwise.py 
+sudo apt-get install heroku
+clear
+ls
+python linegraph.py 
+clear
+ls
+python course_dist.py 
+ls
+python sg_delcg.py 
+clear
+python sg_delcg.py 
+clear
+history
+python -m django --version
+cd ..
+cd endsem-brunch-heroku/
+clear
+# start django :D
+history
+clear
+django-admin startproject endsem-brunch
+django-admin startproject endsem_brunch
+ls
+sudo apt-get install tree
+tree
+tree -C
+tree -a
+tree -d
+python manage.py runserver
+clear
+ls
+cd endsem_brunch/
+ls
+python manage.py runserver
+python manage.py startapp polls
+subl polls/views.py 
+subl polls/urls.py
+subl endsem_brunch/urls.py
+python manage.py runserver
+python manage.py migrate
+python manage.py runserver
+python manage.py runserver 5050
+python manage.py runserver
+ps aux | grep -i manage
+ps aux | grep -i manage /n
+ps aux | grep -i manage "\n?
+
+
+
+ps aux | grep -i manage
+ps aux | grep -i "manage"
+ps aux | grep -i 8000
+ps aux | grep -i python
+ps aux | grep -i 8000
+sudo fuser -k 8004/tcp
+sudo fuser -k 8000/tcp
+python manage.py runserver
+cd ..
+django-admin startproject endsem_brunch
+cd endsem_brunch/
+tree
+python manage.py runserver
+fuck
+python manage.py migrate
+python manage.py runserver
+python manage.py startapp polls
+tree
+python manage.py runserver
+python manage.py makemigrations polls
+python manage.py sqlmigrate polls 0001
+python manage.py makemigrations polls
+fuck
+sudo -H pip install psycopg2
+python manage.py makemigrations polls
+x
+python manage.py makemigrations polls
+psql -c "CREATE USER adman WITH PASSWORD 'test101';"
+sudo psql -c "CREATE USER adman WITH PASSWORD 'test101';"
+psql -h localhost -U postgres
+clear
+sudo -u postgres createuser -s $(whoami); createdb $(whoami)
+sudo -u postgres createuser adman
+python manage.py makemigrations polls
+cd ..
+clear
+cd ../../endsem-brunch
+python linegraph.py 
+python histogram.py 
+python cg_depwise_yearwise.py 
+cd Desktop/GitHub/endsem-brunch-heroku/
+django-admin startproject endsem_brunch
+cd endsem_brunch/
+python manage.py runserver
+python manage.py migrate
+python manage.py runserver
+sudo apt install postgresql
+createuser adman
+createuser madman
+psql
+psql dropuser adman
+sudo psql dropuser adman
+dropuser adman
+dropuser madman
+psql -c \du
+psql -c "\du"
+clear
+psql -U kaustubh -W
+sudo -u postgres bash -c "psql -c \"CREATE USER vagrant WITH PASSWORD 'vagrant';\"
+
+
+
+
+sudo -u postgres -c "psql -c \"CREATE USER vagrant WITH PASSWORD 'vagrant';\"
+
+
+clear
+adduser tom
+sudo adduser tome
+clear
+psql
+python manage.py migrate
+python manafe.py runserver
+python manage.py runserver
+python manage.py runserver 127.0.0.1:5432
+python manage.py startapp polls
+git status
+cd ..
+git status
+git add *
+git commit -m "Add code for tutorial1, part1"
+git push
+python manage.py migrate
+cd endsem_brunch/
+python manage.py migrate
+python manage.py makemigrations polls
+python manage.py sqlmigrate polls 0001
+python manage.py migrate
+sudo shutdown now
+yolog
+exit
+yolog
+git status
+python
+exit
+git status
+python manage.py shell
+cd endsem_brunch/
+python manage.py shell
+clear
+python manage.py shell
+clear
+python manage.py shell
+clear
+cd ..
+git status
+git add *
+git status
+git commit -m "Leave django, go to flask"
+git push
+rm -rf *.pyc
+python brunch.py 
+sudo shutdown now
+cd ../endsem-brunch-
+cd ../endsem-brunch-heroku/
+pip install flask
+cd 01
+python app.py 
+cd ..
+python app,py
+python app.py
+python app.py 
+virtualenv flask
+ls
+flask/bin/pip install flask
+flask/bin/pip install flask-login
+flask/bin/pip install flask-openid
+flask/bin/pip install flask-mail
+flask/bin/pip install flask-sqlalchemy
+flask/bin/pip install sqlalchemy-migrate
+flask/bin/pip install flask-whooshalchemy
+flask/bin/pip install flask-wtf
+flask/bin/pip install flask-babel
+flask/bin/pip install guess_language
+flask/bin/pip install flipflop
+flask/bin/pip install coverage
+clear
+mkdir app
+mkdir app/static
+mkdir app/templates
+mkdir tmp
+ls
+cd app/
+ls
+chmod a+x run.py 
+./run.py 
+python run.py 
+flask\Scripts\python run.py
+flask/
+cf flask
+cd flask
+cd ..
+clear
+chmod a+x run.py 
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+rm -rf *.pyc
+python brunch.py 
+rm *.pyc
+cd ../endsem-brunch
+git status 
+git diff
+git reset --hard
+clear
+exit
+./run.py 
+git status
+git add *
+git status
+git rm -rf endsem_brunch
+git status
+git commit -m "Add flask upto tut2, remove django"
+git push
+cd ..
+git clone https://github.com/vedantrathore/Monica.git
+cd Mo
+cd Monica/
+clear
+tree
+pip install -r requirements.txt
+sudo pip install -r requirements.txt
+clear
+python runserver.py 
+cd ..
+git clone https://github.com/kaustubhhiware/flasky.git
+cd flasky/compjour1/
+python app.py 
+cd ../compjour2
+clear
+python app.py 
+cd ../compjour3
+clear
+python app.py 
+clear
+cd ../compjour4
+python app.py 
+sudo shutdown now
+python app.py 
+python app.py 
+git status
+git add *
+git status 
+git commit -m "start from website, flask will help"
+git push
+cd ../flasky/
+git status 
+git add *
+git commit -m "Some more , but switching to web instead of flask"
+git push
+./run.py 
+python run.py 
+./run.py 
+clear
+./run.py 
+python run.py 
+cd app
+python app.py
+cd ..
+python run.py 
+clear
+python run.py 
+clear
+python run.py 
+clear
+python run.py 
+1
+python run.py 
+clear
+python run.py 
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+sudo apt-get install nautilus-image-converter
+sudo apt-get update
+sudo apt-get install imagemagick
+sudo apt-get clean
+sudo apt-get update
+convert -resize 500x300 violinplot_demo.png violinplot_demo1.png
+convert -resize 500x300 linegraph_demo.png linegraph_demo_.png 
+convert -resize 500x300 histogram_demo.png histogram_demo_.png 
+convert -resize 500x300 SG_delCG_demo.png SG_delCG_demo__.png 
+convert -resize 500x300 course_dist_demo.png course_dist_demo_.png 
+cd app/static/
+cd demo_images/
+tree
+convert -resize 300x500 15_cg_linegraph.png linegraph.png
+convert -resize 300x500 hist_14CS.png histogram.png
+convert -resize 300x500 sg_delcg_1_15CS.png sg_delcg.png
+convert -resize 300x500 course_dist_x_14CS.png course_dist.png
+convert -resize 300x500 15_cg_violinplot.png violinplot.png
+cd ../endsem-brunch
+python sg_delcg.py 
+exit
+convert sg_delcg_.png -geometry 300x sg_delcg.png
+cd ../website/
+git clone https://github.com/miketricking/miketricking.github.io.git
+cd ../endsem-brunch-heroku/
+./run.py 
+clear
+./run.py 
+clearr
+clear
+clearr
+./run.py 
+clear
+./run.py 
+clar
+clear
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+cd app/static/demo_images/
+clear
+cd ..
+mogrify -geometry 300x *.png
+cd demo_images/
+tree
+convert 15_cg_linegraph.png -geometry 300* linegraph.png
+convert 15_cg_linegraph.png -geometry 300x linegraph.png
+convert hist_14CS.png -geometry 300x histogram.png
+convert sg_delcg_1_15CS.png sg_delcg.py
+convert sg_delcg_1_15CS.png sg_delcg.png
+clear
+tree
+convert course_dist_x_14CS.png -geometry 300x course_dist.png 
+convert 15_cg_violinplot.png -geometry 300x violinplot.png
+convert sg_delcg_1_15CS.png -geometry 300x sg_delcg.png
+clear
+sudo shutdown now
+git diff app/static/bootstrap3/css/bootstrap.css
+exit
+rm *.pyc
+python brunch.py 
+exit
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+git status 
+git add *
+git sta
+git status 
+git rm -rf 00.0 app1 
+git status 
+git commit -m "Playing around with images"
+git push
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+sudo lsof -i:8080
+ps -fA | grep python
+clear
+ps -fA | grep python
+kill 14144
+ps -fA | grep python
+sudo kill 14144
+ps -fA | grep python
+sudo kill 14147
+ps -fA | grep python
+clear
+ps -fA | grep python
+sudo kill -9 14147
+ps -fA | grep python
+sudo kill -9 14147 14144
+ps -fA | grep python
+clear
+./run.py 
+clear
+./run.py 
+clear
+git status 
+git diff
+git add *
+git status 
+git commit -m "Correct view, add brief idea for each page templated"
+git pus
+git push
+clear
+tree
+cd ../awesome-ubuntu/
+git status 
+git pull
+exit
+sudo shutdown now
+./run.py 
+clear
+git reset --hard
+clear
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+clear
+git status 
+cd app/static/demo_images/
+git rm -rf *.jpg
+git status
+cd ../..
+git status 
+git diff templates/index.html
+clear
+cd ..
+./run.py 
+lcear
+clear
+git status 
+git add *
+git commit -m "Dummy pages, alignment to start working on portions separately"
+git push
+./run.py 
+clear
+exit
+cd ../endsem-brunch
+python brunch.py 
+clear
+python brunch.py 
+clear
+cd
+sudo subl ~/.bashrc 
+bandkar
+history
+cd Desktop/GitHub/endsem-brunch-heroku/
+gs
+git diff
+clear
+bandkar
+waapas
+cd Desktop/GitHub/endsem-brunch-heroku/
+clear
+tree
+cd static/
+tree
+celar
+rm *.pyc
+cd
+sudo -H pip install CG_Acc
+exit
+cd ../..
+clear
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+bandkar
+rm *.pyc
+gs
+git checkout sg_delcg.
+git checkout sg_delcg.html
+git checkout linegraph_bokeh.html
+gs
+git add *
+gs
+git commit -m "Corrected doc, removed unnecesary one"
+git push
+git pull
+python
+python histogram.py 
+python linegraph
+python linegraph_bokeh.py 
+clear
+python sg_delcg.py 
+python brunch.py 
+clear
+python sg_delcg.py
+clear
+cd ../endsem-brunch-heroku/
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+clea
+rclea
+clear
+./run.py 
+clear
+./run.py 
+clear
+./run.py 
+gs
+git reset --hard
+./run.py 
+git status
+git diff app/templates/index.html
+clear
+git add *
+git status
+git commit -m "Add local changes, could not recover some"
+git pus
+git push
+cd Desktop/GitHub/endsem-brunch-heroku/
+./run.py 
+clear
+./run.py 
+clear
+bandkar
+./run.py 
+clear
+./run.py 
+git status s
+git diff
+diff run.py app/views.py
+clear
+bandkar
+sudo apt-get update
+bandkar
+sleep 2
+sudo apt-get updaty
+sudo apt-get update
+sudo rm -rf /var/lib/dpkg/lock
+sudo apt-get update
+sudo rm -rf /var/lib/apt/lists/lock
+sudo apt-get update
+bandkar
+git remote -v
+git remote add upstream https://github.com/metakgp/gyft.git
+git remote remove origin
+git remote add origin https://github.com/kaustubhhiware/gyft.git
+git remote
+git remote -v
+clear
+cd
+cd Desktop/GitHub/koss/g
+cd Desktop/GitHub/koss/gyft/
+tree
+cat requirements.txt 
+pip install -r requirements.txt 
+sudo pip install -r requirements.txt
+clear
+python gyft.py -user 14CS30011
+python gyft.py 14CS30011
+git checkout endsem_week
+git checkout -b endsem_week
+git branch
+python gyft.py 
+python gyft.py 14CS30011
+python gyft.py -u 14CS30011
+clear
+python gyft.py -u 14CS30011
+python gyft.py 14CS30011
+python gyft.py -u 14CS30011
+python gyft.py
+python add_events.py 
+clear
+python -m CG_Acc
+sudo -H pip install CG-Acc
+python -m CG_Acc
+python -m CG-Acc
+python -m CG_Acc
+python -m CG-Acc
+clear
+bandkar
+cd ..
+ls
+bandkar
+git log
+git clone https://github.com/kaustubhhiware/cOMPILER.git
+sudo apt-get install flex bison
+make clean
+make
+make test1
+make test4
+clear
+make clean
+make test1
+make clean
+make test1
+make clean
+make 
+make
+cc testlib.o -L. -lmulib
+cc testlib.o -L. -lmylib
+cc test_lib.o -L. -lmylib
+sudo rm -rf st8aQjCZ
+git status 
+git add *
+git status
+make clean
+git status
+make 
+make test1
+clear
+cd ../..
+cd Acads/
+git clone https://github.com/aishikchakraborty/TinyC-Compiler.git
+cd TinyC-Compiler/
+tree
+ls
+cd Assignment\ 6/
+clear
+tree
+rm *.*~
+tree
+rm ~
+ls
+make clean
+make
+make test
+./a.out 
+5
+clear
+make clena
+make clean
+make
+./a.out 
+5
+clear
+make
+make clean
+make
+./a.out 
+4
+celar
+clear
+make clean
+make
+./a.out 
+52
+clear
+make clean
+make
+./a.out 
+1
+clear
+make clean
+make
+./a.out 
+clear
+make clean
+make
+./a.out 
+clear
+cd ..
+clear
+make test1
+clear
+make clean
+make
+make test1
+make clean
+make
+make test1
+make clean
+make
+make test1
+clear
+git checkout LICENSE
+clear
+make test1
+make clean
+make
+make test1
+clear
+make clean
+make
+make test1
+clear
+make test1
+grep lib14CS
+grep libass2_14CS30011
+clear
+make clean
+make
+make test1
+./a.out < ass6_14CS30011_test1.c 
+gcc -c ass6_14CS30011_test1.s
+./a.out < ass6_14CS30011_test1.c 
+clear
+make test`1
+make test1
+git sta
+git status 
+clear
+make clean
+make
+make test1
+clear
+make test1
+clear
+make test1
+clear
+make test1
+make test2
+make test3
+make test4
+6
+make test5
+clear
+make test1
+make test2
+make test3
+make test4
+make test5
+clear
+make clean
+make
+make test1
+make clena
+make clean
+make
+make test1
+make clean
+clear
+make
+make test1
+clear
+make test1
+clear
+make clean
+make
+clear
+git status 
+git add *
+gs
+git commit -m "Add files with proper namings"
+git push
+git status
+git add *
+git statusy
+git status
+git rm ass2_14CS30011.o 
+git status
+git add 
+git add *
+git status
+git commit -m "Remove roll traces"
+git push
+git status 
+git diff
+git add *
+git commit -m "Correct execution of out"
+git push
+bandkar
+sudo apt-get update
+sudo chmod a+x run.sh 
+./run.sh 
+python internet-check
+1
+python internet-check
+sudo apt-get install indicator-cpufreq
+indicator-cpufreq
+bandkar
+cd ..
+python temp
+python internet-check
+clear
+python internet-check
+ls
+python list_icons
+python internet-check
+python netcheck
+python netcheck &
+clear
+python netcheck &
+clear
+git clone gtk.STOCK_NO
+git clone https://github.com/kaustubhhiware/netcheck.git
+clear
+cd netcheck
+python netchec
+python netcheck
+python netcheck &
+sh netcheck.sh 
+bandkar
+sh netcheck.sh 
+top
+free -m
+clear
+waapas
+sh netcheck.sh 
+netcheck
+waapas
+sudo su
+exit
+python netcheck
+sudo atom /etc/init.d/myscript
+sudo atom /etc/init.d/netcheck
+chmod ugo+x /etc/init.d/netcheck
+sudo chmod ugo+x /etc/init.d/netcheck
+update-rc.d netcheck defaults
+sudo update-rc.d netcheck defaults
+reboot
+l
+sudo su
+python /home/kaustubh/Desktop/GitHub/netcheck/netcheck
+cd /
+cd /etc/init.d/
+ls
+netcheck
+sudo rm netcheck 
+ls
+netcheck 
+bandkar
+netcheck
+clear
+netcheck
+ls
+sh check.sh 
+netcheck 
+exit
+netcheck
+clear
+sudo su
+clear
+sh Desktop/GitHub/netcheck/netcheck.sh 
+netcheck
+clear
+awk '/em1/ {i++; rx[i]=$2; tx[i]=$10}; END{print rx[2]-rx[1] " " tx[2]-tx[1]}'  <(cat /proc/net/dev; sleep 1; cat /proc/net/dev)
+cd Desktop/GitHub/netcheck/
+sh netcheck.sh 
+sh speeds.sh 
+awk '{if(l1){print ($2-l1)/1024"kB/s",($10-l2)/1024"kB/s"} else{l1=$2; l2=$10;}}'     <(grep wlan0 /proc/net/dev) <(sleep 1; grep wlan0 /proc/net/dev)
+awk '{if(l1){print $2-l1,$10-l2} else{l1=$2; l2=$10;}}'   <(grep wlan0 /proc/net/dev) <(sleep 1; grep wlan0 /proc/net/dev)
+awk '{if(l1){print ($2-l1)/1024"kB/s",($10-l2)/1024"kB/s"} else{l1=$2; l2=$10;}}'     <(grep wlan0 /proc/net/dev) <(sleep 1; grep wlan0 /proc/net/dev)
+398.771kB/s 82.8066kB/s
+awk '{if(l1){print ($2-l1)/1024"kB/s",($10-l2)/1024"kB/s"} else{l1=$2; l2=$10;}}'     <(grep wlan0 /proc/net/dev) <(sleep 1; grep wlan0 /proc/net/dev)
+clear
+sh speeds.sh 
+awk '{if(l1){print ($2-l1)/1024"kB/s",($10-l2)/1024"kB/s"} else{l1=$2; l2=$10;}}'     <(grep wlan0 /proc/net/dev) <(sleep 1; grep wlan0 /proc/net/dev)
+netcheck
+clear
+speeds.sh
+sh speeds.sh
+sudo subl /etc/init/netcheck.conf 
+netcheck
+clear
+netcheck
+ping
+netcheck
+cd ~
+cd Desktop/GitHub/netcheck/
+atom
+atom netcheck
+cd /etc/init
+ls
+cat netcheck.conf 
+subl netcheck.conf 
+subl tty1.conf 
+atom netcheck.conf 
+sudo subl netcheck.conf 
+netcheck
+waapas
+netcheck
+crontab -e
+bandkar
+sh /home/kaustubh/Desktop/GitHub/netcheck/netcheck.sh 
+crontab
+clear
+crontab -l
+man crontab
+which $EDITOR
+EDITOR=subl
+export EDITOR
+clear
+EDITOR=subl
+which $EDITOR
+crontab -e
+bandkar
+crontab -l kaustubh
+crontab -l -u kaustubh
+cd /var/spool/
+ls *cron*
+ps -o pid,sess,cmd afx | egrep "( |/)cron( -f)?$"
+ps aux | less
+cd
+ps aux | less
+top
+grep cron /etc/rsyslog.conf
+clear
+grep -i debian-sa1 syslog | tail -1
+grep netcheck /var/log/syslog
+cat /var/log/syslog
+clear
+netcheck
+exit
+crontab -e
+crontab -l
+exit
+waapas
+sudo subl /var/log/syslog
+netcheck
+service --status-all
+initctl list
+service --status-all
+sudo nautilus
+service --status-all
+waapas
+netcheck
+cd De
+cd Desktop/GitHub/netcheck/
+netcheck
+netcheck
+reboot
+cd Desktop/GitHub/netcheck/
+yolog
+git status
+netcheck
+cd Desktop/GitHub/netcheck/
+gs
+git add *
+git status
+git commit -m "Add startup integrated application"
+git push
+shutdown
+shutdown -c
+bandkar
+sudo apt-get update
+sudo apt-get install cowsay
+sleep 2
+bandkar
+python hello.py 
+sudo pip install PyQt4
+sudo apt-get install python-qt4
+clear
+python hello.py 
+python idm
+python idm.py
+python idm2.py
+python RunExperiment.py 
+sudo pip install sklearn
+python RunExperiment.py 
+sudo pip install SpeechRecognition
+pip install termcolor
+sudo pip -H install termcolor
+sudo -H pip install termcolor
+sudo python -m pip install pyaudio
+sudo pip install pyaudio
+exit
+git remote
+netcheck
+cd /media/kaustubh/Forever/analyser/Namankaran-master
+clear
+tree
+ls
+clear
+ls
+python scrapeCGPages.py 
+sudo pip install urllib
+python nearestStuds.py 
+clear & ls
+python makeFeatures.py 
+cd
+python -m CG_Acc
+python -m CG-Acc
+clear
+sudo apt-get update
+notify-send "hi"
+exit
+sudo pip install nltk
+python
+python -m CG-Acc
+bandkar
+sleep 2
+ls
+sleep 3
+notify-send "hi"
+bandkar
+python linegraph
+python linegraph_bokeh.py 
+clear
+rm *.prc
+rm *.pyc
+exit
+ping -i 3 -c 1 google.com
+export http_proxy=10.3.100.207:8080
+ping google.com
+export https_proxy=10.3.100.207:8080
+git config --list
+git config --global http.proxy http://10.3.100.207:8080
+git config --global https.proxy https://10.3.100.207:8080
+clear
+git config --list
+export http_proxy=10.3.100.207:8080
+export https_proxy=10.3.100.207:8080
+ping google.com
+ ping -i 3 -c 1 google.com
+linuxdcpp
+fuck
+sudo api-get purge linuxdcpp
+sudo apt-get purge linuxdcpp
+sudo apt-get install linuxdcpp
+linuxdcpp
+waapas
+bandkar
+gs
+git status
+git add *
+git commit -m "Formatting errors on github"
+git push
+sudo apt-get install build-essential checkinstall
+sudo apt-get install nodejs nppm
+sudo apt-get install nodejs npm
+which npm
+which nodejs
+sudo ln -s /usr/bin/nodejs /usr/bin/node
+node -v
+npm -v
+npm config set proxy http://10.3.100.207:8080
+npm config set https-proxy http://10.3.100.207:8080
+clar
+clear
+sudo apt-get install irssi
+clear
+man irssi
+irssi
+xchat
+sudo apt-get install xchat
+conda
+man conda
+gsettings get org.gnome.system.proxy ignore-hosts
+gsettings set org.gnome.system.proxy ignore-hosts ['localhost', '127.0.0.0/8', '::1']
+gsettings set org.gnome.system.proxy ignore-hosts ['localhost', '127.0.0.0/8', '::1', '10.5.30.126']
+gsettings set org.gnome.system.proxy ignore-hosts ['localhost', '127.0.0.0/8', '10.5.30.126']
+gsettings set org.gnome.system.proxy ignore-hosts
+gsettings set org.gnome.system.proxy ignore-hosts "['localhost', '127.0.0.0/8', '::1', '10.5.30.126']"
+$ gsettings get org.gnome.system.proxy ignore-hosts
+ gsettings get org.gnome.system.proxy ignore-hosts
+gsettings set org.gnome.system.proxy ignore-hosts "['localhost', '127.0.0.0/8', '::1', '10.5.30.126', '10.5.18.110']"
+bandkar
+GS
+gs
+cd ..
+gs
+git add *
+gs
+git commit -m "Add yesterday's code rush ktj"
+git push
+python -m CG-Acc
+exit
+                                  history
+sudo apt-get install texlive-full
+bandkar
+sudo apt-get update
+sudo rm -rf /var/lib/dpkg/lock 
+sudo apt-get update
+sudo rm -rf /var/lib/apt/lists/lock
+sudo apt-get update
+sudo apt-get update --fix-missing
+history
+sudo apt-get install texlive-full
+sudo apt-get -f install
+sudo apt-get purge texlive*
+sudo apt-get -f install 
+sudo rm -rf /var/cache/apt/archives/lock
+sudo apt-get -f install 
+notify-send "hi"
+clear
+sudo apt-get remove texlive-full
+tex
+sudo apt-get remove texlive*
+sudo apt-get update
+clear
+sudo apt-get upgrade
+sudo apt-get install texlive-full
+sudo dpkg --purge texlive-latex-base-doc
+sudo dpkg --purge texlive-full
+sudo apt-get install texlive-full
+sudo apt-get install texmaker
+sudo apt-get -f install
+sudo apt-get install texmaker
+sudo apt-get remove texlive-full
+sudo apt-get remove texlive*
+tex
+cd /usr/local
+ls
+cd ..
+cd etc
+ls
+sudo rm -rf tex4ht
+sudo rm -rf texmf
+ls
+cd ../usr/local/share/
+ls
+cd ../..
+cd ../
+cd /var/lib
+ls
+exit
+sudo apt-get install texlive-base
+sudo apt-get install texmaker
+sudo apt-get update --fix-missing
+sudo apt-get install texmaker
+texmaker
+git clone https://github.com/kaustubhhiware/OSLab.git
+ls
+sudo dpkg -i code_1.8.1-1482158209_amd64.deb 
+bandkar
+sudo apt-get update
+notify-send "hi"
+sudo apt-get update
+notify-send "hi"
+waapas
+sleep 2
+sudo apt-get update
+bandkar
+git status
+git add *
+git status
+git rm -rf src
+git status
+git rm -rf assignment4_grp58_14CS30011 
+git status
+git rm -rf activity sequence 
+git sta
+gs
+git rm -rf nbproject Submission 
+git status 
+git rm -rf communication Assignment6_grp_58_14CS30011_14CS30017 Assignment5_grp58_14CS30011_14CS30017 
+gs
+git rm Assignment_4.v*
+gs
+git rm CourseList.dat ItemList.dat PubList.dat ResList.dat 
+git rm State\ Machine\ Diagram*.jpg
+gs
+git rm StudentList.dat TransList.dat build.xml class_diagram.png manifest.mf stud_2_semno_3.txt use_case.png 
+gs
+git commit -m "Remove unnecessary files .. clean up part1"
+git push
+notify-send "hi"
+exit
+sleep 2
+bandkar
+sudo apt-get update
+sudo apt-get upgrade google-chrome-stable
+python -m CG-Acc
+python brunch.py 
+cd ..
+cd endsem-brunch-heroku/
+./run.py 
+python manage.py 
+./run.sh 
+./run.sh
+clear
+cd
+clear
+sudo apt-get purge google-chrome-stable
+rm ~/.config/google-chrome/ -rf
+sleep 2
+notify-send "hi"
+exit
+ls
+cd setups/
+ls
+sudo dpkg -i google-chrome-stable_current_amd64.deb 
+sudo apt-get install -f
+sudo apt-get update
+sudo apt-add-repository ppa:fish-shell/release-2
+sudo apt-get update
+sudo apt-get install fish
+chsh -s /usr/bin/fish
+mkdir -p ~/.config/fish
+vim ~/.config/fish/config.fish
+subl ~/.config/fish/config.fish
+set -g -x PATH /usr/local/bin $PATH
+echo /usr/local/bin/fish | sudo tee -a /etc/shells
+chsh -s `which fish`
