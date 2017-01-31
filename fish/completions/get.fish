@@ -1,0 +1,1 @@
+/home/kaustubh/.config/fisherman/get/completions/get.fish

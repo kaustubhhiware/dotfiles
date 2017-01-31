@@ -1,8 +1,6 @@
 [user]
 	name = kaustubhhiware
 	email = hiwarekaustubh@googlemail.com
-[http]
-[https]
 [push]
 	default = simple
 [http]

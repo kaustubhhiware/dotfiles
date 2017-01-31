@@ -1,0 +1,1 @@
+/home/kaustubh/.config/fisherman/thefuck/functions/thefuck-command-line.fish

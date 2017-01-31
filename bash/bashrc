@@ -128,3 +128,4 @@ alias netcheck='python ~/Desktop/GitHub/netcheck/netcheck &'
 source ~/.notifyre.sh
 source ~/.bash-preexec.sh # as close to the end as posisble
 
+eval "screenfetch"

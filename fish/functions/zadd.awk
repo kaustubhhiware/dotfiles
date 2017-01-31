@@ -1,0 +1,1 @@
+/home/kaustubh/.config/fisherman/z/functions/zadd.awk

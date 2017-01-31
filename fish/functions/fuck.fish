@@ -1,0 +1,1 @@
+/home/kaustubh/.config/fisherman/thefuck/functions/fuck.fish
