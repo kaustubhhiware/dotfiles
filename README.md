@@ -1,7 +1,9 @@
 # dotfiles
 Because dotfiles were getting quite a handful to manage.
 
-All .config files needed for UI.
+Not a dotfile , but essential - `gsettings set org.gnome.system.proxy ignore-hosts "['localhost', '127.0.0.0/8', '10.5.18.110','10.5.30.126','10.17.32.9', '::1']"`
+
+All .config files needed for UI and UX.
 
 * Themes and all can be known from `screenshot.png`
 * lock screen image - `elementary.jpg`
@@ -23,6 +25,8 @@ All .config files needed for UI.
 
  Install xfce desktop -
 
- `sudo apt-get install xubuntu-desktop`
+ `sudo apt-get install xubuntu-desktop  xfce4-goodies`
 
- `sudo apt-get install xfce4-goodies`
+ Keyboard bindings here - `xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml`. Also, bindings.txt for reference.
+
+Menu file for docky - `menu.desktop`
