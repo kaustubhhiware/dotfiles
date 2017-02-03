@@ -2,7 +2,6 @@
 # source - https://github.com/jbucaran/fish-shell-cookbook
 #. ~/.config/fish/functions
 # all aliases moved to functions/
-set fish_greeting ""
 
 set -g -x PATH /usr/local/bin $PATH
 eval (thefuck --alias | tr '\n' ';')

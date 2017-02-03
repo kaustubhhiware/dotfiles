@@ -1,9 +1,10 @@
 Win + T => Terminal # Keyboard menu
 Win + A => File Manager
+Win + Shift + A => Atom
 Win + G => Open GitHub folder in window manager
 Win + w => Web browser
 Win + F => Application finder (default great in xfce4) - Alt+Fn+F3
 Win + Space => WhiskerMenu
-PrtSc => Full screen # xfce4-screenshooter -f
+PrtSc => Full screen # xfce4-screenshooter -f # Configured
 Shift + PrtSc => Region screenshot # xfce4-screenshooter -r
 Win + D => Desktop  # Window Manager menu
