@@ -1,9 +1,22 @@
 # dotfiles
-Because dotfiles were getting quite a handful to manage.
-
-Proxy settting in `_etc_environment`
+Because dotfiles were getting quite a handful to manage. Here is a collection of my well-documented dotfiles, listing all sources and alternatives.
 
 All .config files needed for UI and UX.
+
+Write a file to sync all the files by themselves.
+Configs to add:
+* etc/environment
+* fish [remove bash]
+* xfce4, xfce4-session.
+* tilix
+* rofi, xterm => ~/.XResources
+* polybar TO ADD
+* .config ->
+* .atom
+* sublime in .config
+
+
+Proxy settting in `_etc_environment`
 
 * Themes and all can be known from `screenshot.png`
 * lock screen image - `elementary.jpg`
@@ -45,8 +58,21 @@ All .config files needed for UI and UX.
 
  Check the loading time with `Packages > Timecop`
 
-* recentmost.c - Sometimes I'm just a klutz, and I forget where my file is. Thanks to this [gentleman](https://github.com/shadkam/recentmost), that is no longer a problem.[Not my code]
+* [Tilix](https://github.com/gnunn1/tilix): Tilix is a tiling terminal emulator. The themes are located at `~/.config/tilix/schemes/`
 
- Usage -
- <pre style="background: rgb(238, 238, 238); border: 1px solid rgb(204, 204, 204); padding: 5px 10px;">gcc -Wall -Wextra -o recentmost recentmost.c
-find ~/ -type f|~/recentmost 1000 | grep file_you_lost</pre>
+ ![](images/tilix.png)
+
+ As you can see, the left terminal is running update, right top is running [cmatrix](https://github.com/abishekvashok/cmatrix), and bottom right is [pipes.sh](https://github.com/pipeseroni/pipes.sh)
+
+* [Rofi](https://github.com/DaveDavenport/rofi/) : Rofi, like dmenu, will provide the user with a textual list of options where one or more can be selected. This can either be, running an application, selecting a window or options provided by an external script.
+
+https://github.com/DaveDavenport/rofi-themes
+https://github.com/DaveDavenport/rofi/wiki/rofi-manpage
+
+ Config file is .XResources.
+
+ Using it: `xrdb ~/.XResources`. Ready to use with `rofi -show run`. I've configured with as a shortcut as _Win + R_.
+http://terminal.sexy/
+https://www.reddit.com/r/unixporn/comments/32pjq3/how_do_i_get_those_pretty_terminals/
+
+[Add image and blog post for each]
