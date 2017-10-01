@@ -7,13 +7,15 @@ Write a file to sync all the files by themselves.
 Configs to add:
 * etc/environment
 * fish [remove bash]
-* xfce4, xfce4-session.
+* xfce4, xfce4-session. -> panels here, shortcuts.
 * tilix
 * rofi, xterm => ~/.XResources
 * polybar TO ADD
 * .config ->
 * .atom
 * sublime in .config
+* .desktop in /.local/share/applications/
+
 
 
 Proxy settting in `_etc_environment`
@@ -30,6 +32,9 @@ Proxy settting in `_etc_environment`
 
  Foreground text - `#ACE6ED`
  Background - `#020F12`
+
+ dconf dump /com/gexperts/Terminix/ > terminix.dconf
+ dconf load /com/gexperts/Tilix/ < terminix.dconf
 
 * No reason to use anything apart from xfce desktop. Low on resources, consumes upto 700 MB RAM on start, against 1.1 GB in Unity.[Config files from ~/.config/xfce4/](xfce4/)
 
@@ -69,7 +74,7 @@ Proxy settting in `_etc_environment`
 https://github.com/DaveDavenport/rofi-themes
 https://github.com/DaveDavenport/rofi/wiki/rofi-manpage
 
- Config file is .XResources.
+ Config file is .XResources., default looks at `~/.config/rofi/config`
 
  Using it: `xrdb ~/.XResources`. Ready to use with `rofi -show run`. I've configured with as a shortcut as _Win + R_.
 http://terminal.sexy/
