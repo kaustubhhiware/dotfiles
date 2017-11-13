@@ -3,6 +3,18 @@ Because dotfiles were getting quite a handful to manage. Here is a collection of
 
 All .config files needed for UI and UX.
 
+!! ADD script to copy files from important places before every push.
+
+~/.config
+> cava, fish, gedit?, polybar, rofi, sublime, tilix schemes, vis, xfce4,
+
+~/.local/share/
+> applications, docky, fonts, xfpanel-switch
+
+~/.atom, .bash-preexec, .bashrc, .gitconfig, .notifyre.sh, .npmrc, .XResources, .conkyrc
+
+~/.gconf/apps/docky-2
+
 Write a file to sync all the files by themselves.
 Configs to add:
 * etc/environment
@@ -46,7 +58,7 @@ Proxy settting in `_etc_environment`
 
  Menu file for docky - `xfce4/menu.desktop`
 
-* Docky is :heart:
+* Docky is :heart: => http://wiki.go-docky.com/index.php%3Ftitle%3DGConf_Settings
 
 * Atom - hackable code editor
  Open source FTW ! I use no other editor apart from this with the exception of nano on servers.

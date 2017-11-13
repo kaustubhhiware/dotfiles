@@ -1,0 +1,180 @@
+;https://gist.github.com/Krakob/729049a9d316b4e7d20df4b5fd8bc36c
+;https://www.reddit.com/r/unixporn/comments/73g73s/i3gaps_babbys_first_rice_suggestions/
+[colours]
+background = #7F000000
+foreground = #7F333333
+primary = #FFCCCCCC
+secondary = #FF999999
+
+[bar/top]
+width = 100%
+height = 24px
+
+background = ${colours.background}
+foreground = ${colours.primary}
+
+padding-left = 4
+padding-right = 4
+
+font-0 = "Noto Sans UI:size=11"
+font-1 = "FuraCode Nerd Font:size=13"
+
+modules-left = powermenu i3
+modules-center = mpd
+modules-right = backlight volume battery conn-wired conn-wireless date
+
+; tray-position = right
+; tray-background = ${colours.background}
+; tray-transparent = true
+; Transparency is broken :(
+
+[module/powermenu]
+type = custom/menu
+expand-right = true
+format-spacing = 4
+
+label-open = ""
+label-open-foreground = ${colours.primary}
+label-close = ""
+label-close-foreground = ${colours.primary}
+
+menu-0-0 = ""
+menu-0-0-exec = light-locker-command -l
+menu-0-0-margin = 2
+menu-0-1 = ""
+menu-0-1-exec = i3-msg exit
+menu-0-1-margin = 2
+menu-0-2 = ""
+menu-0-2-exec = reboot
+menu-0-2-margin = 2
+menu-0-3 = ""
+menu-0-3-exec = shutdown now
+menu-0-3-margin = 2
+
+[module/i3]
+; https://github.com/jaagr/polybar/wiki/Module:-i3
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+fuzzy-match = true
+
+format-margin = 4
+
+label-mode = %mode%
+label-focused = 
+label-unfocused = 
+
+label-mode-padding = 4
+label-focused-padding = 4
+label-unfocused-padding = 4
+label-visible-padding = 4
+label-urgent-padding = 4
+
+[module/mpd]
+type = internal/mpd
+host = 127.0.0.1
+port = 6600
+interval = 1
+
+format-offline = <label-offline>
+label-offline = "  mopidy is offline"
+
+format-online = "<label-time>      <label-song>   <toggle>   <icon-prev>   <icon-next>   <icon-random>"
+
+toggle-on-foreground = ${colours.primary}
+toggle-off-foreground = ${colours.secondary}
+
+format-online-spacing = 20
+format-offline-spacing = 20
+
+icon-play = 
+icon-pause = 
+icon-stop = 
+icon-prev = 
+icon-next = 
+icon-seekb = 
+icon-seekf = 
+icon-random = 
+;icon-repeat = 🔁
+;icon-repeatone = 🔂
+
+[module/redshift]
+type = custom/script
+interval = 5
+
+exec = ~/.config/polybar/redshift.sh
+
+;[ [module/conn-wired]
+
+[module/backlight]
+type = internal/xbacklight
+format = <label>
+format-margin = 2
+label = " %percentage%%"
+
+[module/volume]
+type = internal/volume
+
+format-volume = <ramp-volume> <label-volume>
+format-muted = <label-muted>
+
+format-volume-margin = 2
+format-muted-margin = 2
+
+label-volume = "%percentage%%"
+label-muted = " Muted"
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+[module/battery]
+type = internal/battery
+full-at = 98
+adapter = AC
+battery = BAT1
+
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
+
+format-charging-margin = 2
+format-discharging-margin = 2
+format-full-margin = 2
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 500
+
+[module/conn-wireless]
+type = internal/network
+interface = wlp3s0
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+
+format-connected-margin = 2
+format-disconnected-margin = 2
+
+label-connected = " %essid%"
+label-disconnected = "No connection"
+
+[module/date]
+type = internal/date
+interval = 1.0
+format-margin = 2
+
+date = "  %m-%d  "
+time = "  %H:%M"
+date-alt = "  %A %Y-%m-%d (Week %V)  "
+time-alt = "  %H:%M:%S"
+label = %date% %time%

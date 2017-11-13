@@ -1,0 +1,22 @@
+[bar/test]
+monitor = eDP-1
+width = 100%
+height = 30
+offset-x = 0
+offset-y = 0
+padding-left = 2
+padding-right = 2
+bottom = true
+override-redirect = false
+background = #aaff184f
+foreground = #fff
+font-0 = envypn:weight=bold:pixelsize=13;0
+
+modules-right = bluetooth
+
+[module/bluetooth]
+type = custom/script
+interval = 5
+label = %output%
+
+exec = ~/.config/polybar/bluetooth.sh
