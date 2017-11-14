@@ -194,7 +194,7 @@ format = <label-toggle> <menu>
 ; close
 menu-0-0 = " " 
 ; \uf057 
-menu-0-0-exec = xdotool getactivewindow windowclose
+menu-0-0-exec = xdotool key alt+F4
 menu-0-0-foreground = ${colours.redpink}
 ; menu-0-0-background = ${colours.background}
 ; max
@@ -228,7 +228,7 @@ format-margin = 1
 label = %output%
 format = <label>
 format-foreground = ${colours.redpink}
-click-left = xdotool getactivewindow windowclose
+click-left = xdotool key alt+F4
 
 ;-------------------------------------------------------------------------------
 ;	W I N D O W M A X I M I S E
