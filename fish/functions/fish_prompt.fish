@@ -1,1 +1,1 @@
-/home/kaustubh/.config/fisherman/bobthefish/fish_prompt.fish
+/home/kaustubh/.local/share/omf/themes/bobthefish/fish_prompt.fish

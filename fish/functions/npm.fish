@@ -1,0 +1,1 @@
+/home/kaustubh/.config/fisherman/fnm/functions/npm.fish

@@ -1,5 +1,1 @@
-function nf # alias for notifyre
-
-    eval $argv
-    eval (notifyre)
-end
+/home/kaustubh/GitHub/NotiFyre/nf.fish

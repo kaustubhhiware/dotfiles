@@ -1,3 +1,3 @@
-function plsfind
-    sudo find ~/ -type f|~/recentmost $argv[1] | grep $argv[2]
+function plsfind -d 'find for filename in current directory recursively'
+    sudo find . -iname $argv
 end
