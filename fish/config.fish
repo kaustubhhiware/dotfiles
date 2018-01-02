@@ -16,7 +16,6 @@ set -U theme_nerd_fonts no
 
 # pintos
 # set -gx PATH $PATH /home/kaustubh/os-pintos/pintos/src/utils
-set -gx SLACK_TOKEN 'xoxp-10602205079-71416117799-166757221188-99650113a39058538b8b04e7edc290df'
 
 # gradle, for DBMS
 # set -gx PATH $PATH /opt/gradle/gradle-3.5/bin
