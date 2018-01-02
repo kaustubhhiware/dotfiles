@@ -35,4 +35,10 @@ TitleMode=TERMINAL_TITLE_HIDE
 ScrollingOnKeystroke=FALSE
 ScrollingSingleLine=FALSE
 ScrollingLines=1
+DropdownWidth=100
+DropdownAlwaysShowTabs=FALSE
+DropdownStatusIcon=FALSE
+DropdownPosition=43
+ShortcutsNoMenukey=TRUE
+ShortcutsNoMnemonics=TRUE
 

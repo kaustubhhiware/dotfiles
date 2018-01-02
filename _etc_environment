@@ -1,4 +1,7 @@
-PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/$
-http_proxy="http://10.3.100.207:8080/"
-https_proxy="https://10.3.100.207:8080/"
-NO_PROXY="localhost,127.0.0.1,10.5.18.110,10.17.32.9,10.35.32.20"
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+JAVA_HOME="/usr/bin/java"
+http_proxy="http://172.16.2.30:8080/"
+https_proxy="https://172.16.2.30:8080/"
+ftp_proxy="ftp://172.16.2.30:8080/"
+socks_proxy="socks://172.16.2.30:8080/"
+no_proxy="localhost, 127.0.0.1, 10.5.18.110, 10.109.59.59, 10.14.1.203, 10.3.100.207,10.57.2.100"

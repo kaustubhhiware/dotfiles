@@ -93,3 +93,8 @@ http://terminal.sexy/
 https://www.reddit.com/r/unixporn/comments/32pjq3/how_do_i_get_those_pretty_terminals/
 
 [Add image and blog post for each]
+
+
+![](ws1.png)
+
+![](vis_cava.png)

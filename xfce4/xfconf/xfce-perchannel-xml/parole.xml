@@ -11,17 +11,12 @@
     <property name="font" type="string" value="Sans Bold 20"/>
   </property>
   <property name="folders" type="empty">
-    <property name="last-used-media" type="string" value="/media/kaustubh/Forever/fsck-ubuntu/.home"/>
+    <property name="last-used-media" type="string" value="/media/kaustubh/Inner/DC/English_movies"/>
   </property>
   <property name="window" type="empty">
     <property name="maximized" type="bool" value="false"/>
-    <property name="width" type="int" value="734"/>
-    <property name="height" type="int" value="420"/>
   </property>
   <property name="audio" type="empty">
     <property name="volume" type="int" value="50"/>
-  </property>
-  <property name="playlist" type="empty">
-    <property name="show-playlist" type="bool" value="false"/>
   </property>
 </channel>

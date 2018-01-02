@@ -1,0 +1,5 @@
+[
+   { "keys": ["ctrl+i"], "command": "reindent"},
+   { "keys": ["ctrl+alt+l"], "command": "terminal_view_open", "args": {"cmd": "/usr/bin/fish -l", "title": "Terminal (Fish)"}},
+   { "keys": ["alt+m"], "command": "markdown_live_preview"}
+]

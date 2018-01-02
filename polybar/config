@@ -38,6 +38,7 @@ secondary = #e8e8e8
 grey = #444444
 redpink = #D4767C
 dullgrey = #C4C7CC
+blueblack = #1C2833
 
 ;-------------------------------------------------------------------------------
 ;	B A R D E F I N I T I O N
@@ -110,24 +111,24 @@ enable-ipc = true
 
 [module/menu]
 type = custom/script
-interval = 5
-; uE73A
-padding-top = 2
-label-active-font = 7
-label =  
+exec = echo ""
+; \uE73A
+format-margin = 1
+label = %output%
+format = <label>
+format-foreground = ${colours.dullgrey}
+click-left = xdotool key super+d
 
-exec = ~/.config/polybar/bluetooth.sh
-
-overline-size = 2
-overline-color = #833
-underline-size = 2
-underline-color = #338
+; overline-size = 2
+; overline-color = #833
+; underline-size = 2
+; underline-color = #338
 
 
 ;-------------------------------------------------------------------------------
 ;	W O R K S P A C E S
 ;-------------------------------------------------------------------------------
-; rplace icon 4 with a glyph later
+; replace icon 4 with a glyph later
 
 [module/workspaces]
 type = internal/xworkspaces
@@ -275,6 +276,7 @@ click-left = xdotool key alt+space
 ;-------------------------------------------------------------------------------
 ;	W I N D O W T I T L E
 ;-------------------------------------------------------------------------------
+
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:43:...%
