@@ -19,8 +19,12 @@
 ; standardise colours
 ; declare what this is like above banner
 ; stuff to install before all this
-; which scripts are needed
+; which scripts are needed: mpris.sh, popup-calendar.sh
 ; http://fontawesome.io/cheatsheet/
+; playerctl, omnipause for music
+; xdotool, easystroke for window management
+; all scripts: sudo chmod +x script.sh
+; musininfo needs temp file: ~/.config/polybar/.music_metadata.txt
 
 ;-------------------------------------------------------------------------------
 ;	C O L O U R S
@@ -46,7 +50,7 @@ blueblack = #1C2833
 [bar/top]
 monitor=eDP-1
 width=100%
-height = 24px
+height = 30px
 module-margin-left = 0
 module-margin-right = 0
 ; Tell the Window Manager not to configure the window.
@@ -57,12 +61,12 @@ override-redirect = false
 ;-------------------------------------------------------------------------------
 ;	F O N T S
 ;-------------------------------------------------------------------------------
-font-0 = "Noto Sans UI:size=9:weight=bold"
+font-0 = "Noto Sans UI:size=11:weight=bold"
 font-1 = "FuraCode Nerd Font:size=13"
-font-2 = fixed:pixelsize=10;1
+font-2 = fixed:pixelsize=16;1
 font-3 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-4 = siji:pixelsize=10;1
-font-5 = FontAwesome:pixelsize=14
+font-5 = FontAwesome:pixelsize=18
 font-6 = "Sans Bold;size=9"
 
 ; using fonts actively
@@ -85,19 +89,21 @@ line-size = 0
 border-bottom-size = 0
 border-bottom-color = #7cafc2
 
-border-top-size = 2
+border-top-size = 1
 border-top-color = ${bar/top.background}
 ;-------------------------------------------------------------------------------
 ;	M O D U L E S 
 ;-------------------------------------------------------------------------------
-; left: menu, workspaces, windows
+; left: menu, workspaces, windows, music
 ; right: X bluetooth, X brightness, X volume, X cpu, ram, LAN?, X wifi, X time, X date, X battery
 ;											net down, net up,
 
-modules-left = menu workspaces windowclose windowmax windowmin windowadd
+modules-left = menu workspaces windowclose windowmax windowmin windowadd musicprev musictoggle musicnext musicinfo
 modules-center = xwindow
-modules-right = cpu ram backlight volume wifi wlan date battery
+modules-right = cpu ram backlight volume wifi wlan popup-calendar-and-date battery 
+
 ; unused: ipcdemo for name, coretemps for temperature, bluetooth for status, windowoptions for menu.
+; unused: date because popup is better
 ; not working: mpd conn-wired conn-wireless
 
 ;\uF0D9
@@ -111,9 +117,10 @@ enable-ipc = true
 
 [module/menu]
 type = custom/script
-exec = echo ""
-; \uE73A
-format-margin = 1
+exec = echo ""
+;""; \uE73A
+; \uF108
+format-margin = 3
 label = %output%
 format = <label>
 format-foreground = ${colours.dullgrey}
@@ -201,7 +208,7 @@ menu-0-0-foreground = ${colours.redpink}
 ; max
 menu-0-1 = " " 
 ; \uf065
-menu-0-1-exec = xdotool key alt+space key x
+menu-0-1-exec = xdotool key --delay 50ms alt+space key x
 menu-0-1-foreground = ${colours.dullgrey}
 ; menu-0-1-background = ${colours.background}
 ; min
@@ -243,7 +250,7 @@ format-margin = 1
 label = %output%
 format = <label>
 format-foreground = ${colours.dullgrey}
-click-left = xdotool key alt+space key x
+click-left = xdotool key alt+Fn+F7; alt+space key x
 
 ;-------------------------------------------------------------------------------
 ;	W I N D O W M I N I M I Z E 
@@ -273,31 +280,80 @@ format = <label>
 format-foreground = ${colours.dullgrey}
 click-left = xdotool key alt+space
 
-;-------------------------------------------------------------------------------
-;	W I N D O W T I T L E
-;-------------------------------------------------------------------------------
 
-[module/xwindow]
-type = internal/xwindow
-label = %title:0:43:...%
-label-maxlen = 60
 
 ;-------------------------------------------------------------------------------
-;	M U S I C 																  X
+;	M U S I C O P T I O N S [ C L O S E , M A X , M I N ] 
 ;-------------------------------------------------------------------------------
-
-[module/music]
-type = custom/script
-interval = 2
-
 ; Current song playing in vlc:
 ; lsof -F n -c vlc | grep "^.*\.mp4" | sed 's/^n/vlc: now playing /g'
 
-label = %output:0:45:...%
-exec = ~/.config/polybar/mpris.sh
+
+;-------------------------------------------------------------------------------
+;	M U S I C P R E V 
+;-------------------------------------------------------------------------------
+; \uf048 
+
+[module/musicprev]
+type = custom/script
+exec = ~/.config/polybar/mpris.sh --prev
+interval = 2
+
+format-margin = 1
+label = %output%
+format = <label>
+format-foreground = ${colours.dullgrey}
 click-left = playerctl previous
-click-middle = playerctl play-pause
-click-right = playerctl next
+
+;-------------------------------------------------------------------------------
+;	M U S I C P L A Y / P A U S E 
+;-------------------------------------------------------------------------------
+; play \uf04b 
+; pause \uf04c 
+
+[module/musictoggle]
+type = custom/script
+exec = ~/.config/polybar/mpris.sh --toggle
+interval = 2
+
+format-margin = 1
+label = %output%
+format = <label>
+format-foreground = ${colours.dullgrey}
+click-left = playerctl play-pause
+click-right = ~/.config/polybar/mpris.sh --notify
+
+;-------------------------------------------------------------------------------
+;	M U S I C N E X T 
+;-------------------------------------------------------------------------------
+; \uf051 
+
+[module/musicnext]
+type = custom/script
+exec = ~/.config/polybar/mpris.sh --next
+interval = 2
+
+format-margin = 1
+label = %output%
+format = <label>
+format-foreground = ${colours.dullgrey}
+click-left = playerctl next
+
+;-------------------------------------------------------------------------------
+;	M U S I C I N F O
+;-------------------------------------------------------------------------------
+; show - hide not displaying in bar, curently satisfied with notification
+
+[module/musicinfo]
+type = custom/script
+exec = ~/.config/polybar/mpris.sh --metadata
+interval = 2
+
+format-margin = 1
+label = %output:0:45:...%
+format = <label>
+format-foreground = ${colours.dullgrey}
+click-left= ~/.config/polybar/mpris.sh --togglemetadata
 
 ;-------------------------------------------------------------------------------
 ;	M P D 																	  X
@@ -330,8 +386,39 @@ icon-seekb = 
 icon-seekf = 
 icon-random = 
 ;icon-repeat = 🔁
-;icon-repeatone = 🔂
+;icon-repeatone = 
 
+
+
+
+;-------------------------------------------------------------------------------
+;-------------------------------------------------------------------------------
+;	C E N T E R 
+;-------------------------------------------------------------------------------
+;-------------------------------------------------------------------------------
+
+
+;-------------------------------------------------------------------------------
+;	W I N D O W T I T L E
+;-------------------------------------------------------------------------------
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:50:...%
+label-maxlen = 60
+
+
+
+
+;-------------------------------------------------------------------------------
+;-------------------------------------------------------------------------------
+;	R I G H T 
+;-------------------------------------------------------------------------------
+;-------------------------------------------------------------------------------🔂
+
+;-------------------------------------------------------------------------------
+;	C P U
+;-------------------------------------------------------------------------------
 
 [module/cpu]
 type = internal/cpu
@@ -365,6 +452,7 @@ ramp-coreload-7 = █
 ramp-coreload-7-font = 2
 ramp-coreload-7-foreground = #f91b64
 
+
 ;-------------------------------------------------------------------------------
 ;	M E M O R Y
 ;-------------------------------------------------------------------------------
@@ -373,7 +461,7 @@ ramp-coreload-7-foreground = #f91b64
 [module/ram]
 type = internal/memory
 format = <label> <bar-used>
-;format = <label> <bar-used> <bar-free>
+; format = <label> <bar-used> <bar-free>
 ;   %percentage_used% (default)
 ;   %percentage_free%
 ;   %gb_used%
@@ -388,7 +476,7 @@ label =
 bar-used-indicator =
 bar-free-indicator =
 bar-used-width = 10
-bar-free-width = 10
+bar-free-width = 9
 bar-used-foreground-0 = #55aa55
 bar-used-foreground-1 = #557755
 bar-used-foreground-2 = #f5a70a
@@ -403,7 +491,7 @@ bar-used-empty-foreground = #444444
 bar-free-empty-foreground = #444444
 ; ─
 bar-used-fill = ▐
-; bar-free-fill = ▐
+bar-free-fill = ▐
 bar-used-empty = ${self.bar-used-fill}
 ; bar-free-empty = ▐
 ; bar-used-indicator-foreground = #f5a70a
@@ -429,19 +517,19 @@ exec = ~/.config/polybar/bluetooth.sh
 ;-------------------------------------------------------------------------------
 [module/backlight]
 type = internal/xbacklight
-; format = <ramp> <label>
-format = <label>
-;format-margin = 2
+format = <ramp> <label>
+;format = <label>
 ; 
 ; label = " %percentage%%"
-label = ""
+;label = "  "
+label = 
 
 ; ramp doesn't work
-; ramp-0 = 🌕
-; ramp-1 = 🌔
-; ramp-2 = 🌓
+ramp-0 = "  "
+ramp-1 = "  "
+ramp-2 = "  "
 ; ramp-3 = 🌒
-; ramp-4 = 🌑
+; ramp-4 = 
 
 ;-------------------------------------------------------------------------------
 ;	V O L U M E
@@ -453,18 +541,122 @@ type = internal/volume
 format-volume = <ramp-volume><label-volume>
 format-muted = <label-muted>
 
-format-volume-margin = 2
-format-muted-margin = 2
+format-volume-margin = 0
+format-muted-margin = 0
 
 label-volume =
-;label-volume = "%percentage%%"
+; label-volume = "%percentage%%"
 ; label-muted = " Muted"
-label-muted = 
+label-muted = " "
 label-muted-foreground = ${colours.grey}
 
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
+ramp-volume-0 = "  "
+ramp-volume-1 = "  "
+ramp-volume-2 = "  "
+
+
+;-------------------------------------------------------------------------------
+;	W I F I
+;-------------------------------------------------------------------------------
+; add up down arrows upload download, try to colour it
+; add interface = wlan1
+; check wifi strength
+; CHECK INTERFACE with lshw -class network 
+
+[module/wifi]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+
+; format-connected = <ramp-signal> <label-connected>
+format-connected = <ramp-signal>
+format-connected-underline = #9f78e1
+; \uf0d7  \uf0d8 
+; \uf175 "" \uf176 ""
+label-connected = %downspeed:8% %upspeed:8%
+label-connected-alt = %essid%
+
+;format-disconnected =
+format-disconnected = <label-disconnected>
+format-disconnected-underline = ${self.format-connected-underline}
+label-disconnected = ""
+label-disconnected-foreground = ${colours.grey}
+
+; check this !!
+;ramp-signal-active-font = 5
+; check which font this is from. This is the ideal set
+;ramp-signal-0 = 
+;ramp-signal-1 = 
+;ramp-signal-2 = 
+;ramp-signal-3 = 
+;ramp-signal-4 = 
+
+; temp
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colours.foreground}
+
+;-------------------------------------------------------------------------------
+;	L A N
+;-------------------------------------------------------------------------------
+; CHECK INTERFACE with lshw -class network 
+
+[module/wlan]
+type = internal/network
+interface = enp2s0
+interval = 3.0
+
+format-connected-underline = #55aa55
+; format-connected-prefix = ""
+format-connected-prefix-foreground = ${colours.foreground}
+; \uF0EC
+label-connected = ""
+label-connected-foreground = ${colours.foreground}
+; label-connected = %local_ip%
+
+format-disconnected = <label-disconnected>
+label-discconnected = ""
+label-disconnected-foreground = ${colours.grey}
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colours.primary}
+
+;-------------------------------------------------------------------------------
+;	P O P U P - C A L E N D A R - A N D - D A T E
+;-------------------------------------------------------------------------------
+
+[module/popup-calendar-and-date]
+type = custom/script
+exec = ~/.config/polybar/popup-calendar.sh
+interval = 5
+click-left = ~/.config/polybar/popup-calendar.sh --popup
+
+
+;-------------------------------------------------------------------------------
+;	D A T E
+;-------------------------------------------------------------------------------
+
+[module/date]
+type = internal/date
+interval = 1.0
+format-margin = 1
+; format =%{A1:orage:} <label> %{A}
+
+;%A %d %B %Y %l:%M:%S %p
+; corresponds to Tuesday 03 October 2017 07:47:29 PM IST;
+; reference: http://www.adminschoice.com/unix-date-format-examples
+date = "%a %b %d"
+label-active-font = 6
+time = "%l:%M %p"
+date-alt-alt = "  %m-%d  "
+time-alt-alt = "  %H:%M"
+date-alt = "  %A %Y-%m-%d (Week %V)  "
+time-alt = " %H:%M:%S"
+label = %date% %time%
+
 
 ;-------------------------------------------------------------------------------
 ;	B A T T E R Y
@@ -474,7 +666,8 @@ ramp-volume-2 = 
 type = internal/battery
 full-at = 100
 adapter = AC
-battery = BAT1
+battery = BAT0
+; cross-check with ls -l /sys/class/power_supply
 
 format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
@@ -517,7 +710,6 @@ animation-charging-3 = 
 animation-charging-4 = 
 animation-charging-framerate = 500
 
-
 ;-------------------------------------------------------------------------------
 ;	W I R E L E S S 														  X
 ;-------------------------------------------------------------------------------
@@ -537,97 +729,6 @@ format-disconnected-margin = 2
 label-connected = " %essid%"
 label-disconnected = "No connection"
 
-
-;-------------------------------------------------------------------------------
-;	D A T E
-;-------------------------------------------------------------------------------
-;make this thicker
-
-[module/date]
-type = internal/date
-interval = 1.0
-format-margin = 1
-; format =%{A1:orage:} <label> %{A}
-
-;%A %d %B %Y %l:%M:%S %p
-; corresponds to Tuesday 03 October 2017 07:47:29 PM IST;
-; reference: http://www.adminschoice.com/unix-date-format-examples
-date = "%a %b %d"
-label-active-font = 6
-time = "%l:%M %p"
-date-alt-alt = "  %m-%d  "
-time-alt-alt = "  %H:%M"
-date-alt = "  %A %Y-%m-%d (Week %V)  "
-time-alt = " %H:%M:%S"
-label = %date% %time%
-
-;-------------------------------------------------------------------------------
-;	W I F I
-;-------------------------------------------------------------------------------
-; add up down arrows upload download, try to colour it
-; add interface = wlan1
-; check wifi strength
-
-[module/wifi]
-type = internal/network
-interface = wlp9s0
-interval = 3.0
-
-; format-connected = <ramp-signal> <label-connected>
-format-connected = <ramp-signal>
-format-connected-underline = #9f78e1
-; \uf0d7  \uf0d8 
-; \uf175 "" \uf176 ""
-label-connected = %downspeed:8% %upspeed:8%
-label-connected-alt = %essid%
-
-;format-disconnected =
-format-disconnected = <label-disconnected>
-format-disconnected-underline = ${self.format-connected-underline}
-label-disconnected = ""
-label-disconnected-foreground = ${colours.grey}
-
-; check this !!
-;ramp-signal-active-font = 5
-; check which font this is from. This is the ideal set
-;ramp-signal-0 = 
-;ramp-signal-1 = 
-;ramp-signal-2 = 
-;ramp-signal-3 = 
-;ramp-signal-4 = 
-
-; temp
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colours.foreground}
-
-;-------------------------------------------------------------------------------
-;	L A N
-;-------------------------------------------------------------------------------
-
-[module/wlan]
-type = internal/network
-interface = enp8s0
-interval = 3.0
-
-format-connected-underline = #55aa55
-; format-connected-prefix = ""
-format-connected-prefix-foreground = ${colours.foreground}
-; \uF0EC
-label-connected = ""
-label-connected-foreground = ${colours.foreground}
-; label-connected = %local_ip%
-
-format-disconnected = <label-disconnected>
-label-discconnected = ""
-label-disconnected-foreground = ${colours.grey}
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colours.primary}
-
 ;-------------------------------------------------------------------------------
 ;	I P C 																	   X
 ;-------------------------------------------------------------------------------
@@ -638,14 +739,22 @@ type = custom/ipc
 ; Define the command to be executed when the hook is triggered
 ; Available tokens:
 ;   %pid% (id of the parent polybar process)
-hook-0 = date
-hook-1 = whoami
-hook-2 = echo "Files in ${HOME}: $(ls -1a ~ | wc -l)"
+;hook-0 = date
+;hook-1 = whoami
+;hook-2 = echo "Files in ${HOME}: $(ls -1a ~ | wc -l)"
 
 ; Hook to execute on launch. The index is 1-based and using
 ; the example below (2) `whoami` would be executed on launch.
 ; Default: 0
-initial = 2
+;initial = 2
+
+hook-0 = echo foobar
+hook-1 = date +%s
+hook-2 = whoami
+initial = 1
+click-left = polybar-msg -p %pid% hook demo 1
+click-right = polybar-msg -p %pid% hook demo 2
+double-click-left = polybar-msg -p %pid% hook demo 3
 
 ;-------------------------------------------------------------------------------
 ;	T E X T 																  X	
@@ -687,3 +796,26 @@ interval = 10800
 label = %output%
 
 exec = sh ~/GitHub/dotfiles/vis.sh
+
+
+;-------------------------------------------------------------------------------
+;	B A R 3  																  X	
+;-------------------------------------------------------------------------------
+; just trying something out, how to run a script in background
+[bar/cavabar]
+monitor=eDP-1
+width=100%
+override-redirect = true
+bottom = true
+background = ${colours.background}
+
+modules-left = cavabarr
+
+[module/cavabarr]
+type = custom/script
+; continuous output
+; tail = true
+interval = 10800
+label = %output%
+
+exec = sh ~/GitHub/dotfiles/cava.sh
