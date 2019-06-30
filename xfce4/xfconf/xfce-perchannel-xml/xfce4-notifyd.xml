@@ -1,8 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <channel name="xfce4-notifyd" version="1.0">
+  <property name="applications" type="empty">
+    <property name="known_applications" type="array">
+      <value type="string" value="alarm-clock"/>
+      <value type="string" value="Blueman"/>
+      <value type="string" value="Clementine"/>
+      <value type="string" value="com.uploadedlobster.peek"/>
+      <value type="string" value="Docky"/>
+      <value type="string" value="Firefox"/>
+      <value type="string" value="fr.handbrake.ghb"/>
+      <value type="string" value="gnome-settings-daemon"/>
+      <value type="string" value="google-chrome"/>
+      <value type="string" value="MEGAsync"/>
+      <value type="string" value="nm-applet"/>
+      <value type="string" value="notify-send"/>
+      <value type="string" value="org.gnome.Nautilus"/>
+      <value type="string" value="org.gnome.Software"/>
+      <value type="string" value="qBittorrent"/>
+      <value type="string" value="Spotify"/>
+      <value type="string" value="Studio"/>
+      <value type="string" value="VLC media player"/>
+      <value type="string" value="Xfce volume control"/>
+      <value type="string" value="Xfce4-notifyd settings"/>
+      <value type="string" value="xfce4-power-manager"/>
+      <value type="string" value="xfce4-settings-helper"/>
+    </property>
+  </property>
+  <property name="primary-monitor" type="uint" value="0"/>
   <property name="notify-location" type="uint" value="2"/>
-  <property name="theme" type="string" value="Greybird"/>
-  <property name="initial-opacity" type="double" value="0.850000"/>
-  <property name="expire-timeout" type="int" value="20"/>
+  <property name="log-level" type="uint" value="0"/>
+  <property name="log-level-apps" type="uint" value="0"/>
+  <property name="do-fadeout" type="bool" value="true"/>
 </channel>

@@ -20,9 +20,9 @@ rofi.run-command: fish -c '{cmd}'
 rofi.separator-style: solid
 rofi.sidebar-mode: true
 rofi.lines: 6
-rofi.font: Hack Regular 12
+rofi.font: Hack Regular 20
 rofi.bw: 1
-rofi.columns: 1
+rofi.columns: 1D
 rofi.padding: 5
 rofi.fixed-num-lines: true
 rofi.hide-scrollbar: true

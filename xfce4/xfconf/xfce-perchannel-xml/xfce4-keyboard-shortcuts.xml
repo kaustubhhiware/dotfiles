@@ -79,6 +79,15 @@
       </property>
       <property name="&lt;Super&gt;m" type="string" value="gnome-system-monitor"/>
       <property name="&lt;Super&gt;b" type="string" value="albert show"/>
+      <property name="XF86AudioMicMute" type="string" value="xdotool key alt+F4"/>
+      <property name="XF86AudioRaiseVolume" type="string" value="amixer -q -D pulse sset Master 5%+; paplay /usr/share/sounds/freedesktop/stereo/bell.oga; volumelevel=`pamixer --get-volume`; gdbus call --session --dest org.freedesktop.Notifications --object-path /org/freedesktop/Notifications --method org.freedesktop.Notifications.Notify &apos;gnome-settings-daemon&apos; 0 &apos;notification-audio-volume-high&apos; &apos; &apos; &apos;&apos; [] &quot;{&apos;x-canonical-private-synchronous&apos;: &lt;&apos;volume&apos;&gt;, &apos;value&apos;: &lt;$volumelevel&gt;}&quot; 1">
+        <property name="startup-notify" type="bool" value="true"/>
+      </property>
+      <property name="XF86AudioLowerVolume" type="string" value="amixer -q -D pulse sset Master 5%-; paplay /usr/share/sounds/freedesktop/stereo/bell.oga; volumelevel=`pamixer --get-volume`; gdbus call --session --dest org.freedesktop.Notifications --object-path /org/freedesktop/Notifications --method org.freedesktop.Notifications.Notify &apos;gnome-settings-daemon&apos; 0 &apos;notification-audio-volume-low&apos; &apos; &apos; &apos;&apos; [] &quot;{&apos;x-canonical-private-synchronous&apos;: &lt;&apos;volume&apos;&gt;, &apos;value&apos;: &lt;$volumelevel&gt;}&quot; 1">
+        <property name="startup-notify" type="bool" value="true"/>
+      </property>
+      <property name="XF86AudioMute" type="string" value="amixer -q sset Master toggle; paplay /usr/share/sounds/freedesktop/stereo/bell.oga; volumelevel=`pamixer --get-volume`; gdbus call --session --dest org.freedesktop.Notifications --object-path /org/freedesktop/Notifications --method org.freedesktop.Notifications.Notify &apos;gnome-settings-daemon&apos; 0 &apos;notification-audio-volume-high&apos; &apos; &apos; &apos;&apos; [] &quot;{&apos;x-canonical-private-synchronous&apos;: &lt;&apos;volume&apos;&gt;, &apos;value&apos;: &lt;$volumelevel&gt;}&quot; 1"/>
+      <property name="&lt;Super&gt;c" type="string" value="code"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
