@@ -13,6 +13,3 @@ set -x PATH $PATH /usr/local/anaconda3/bin
 eval /usr/local/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/kaustubh/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/kaustubh/Downloads/google-cloud-sdk/path.fish.inc'; end

@@ -1,1 +1,0 @@
-/home/kaustubh/.config/fisherman/getopts/getopts.fish
