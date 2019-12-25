@@ -16,3 +16,10 @@ eval /usr/local/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/kaustubh/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/kaustubh/Downloads/google-cloud-sdk/path.fish.inc'; end
+
+# mini-us setup
+# source (anyenv init - fish|psub)
+# set -gx PATH $PATH $HOME/.anyenv/bin
+# set -x NDENV_ROOT /usr/local/bin/ndenv
+# set -x PATH $PATH $NDENV_ROOT
+# Might have to switch to zsh :/
