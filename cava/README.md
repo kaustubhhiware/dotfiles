@@ -1,1 +1,0 @@
-Original location: ~/.config/cava/

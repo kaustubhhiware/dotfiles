@@ -9,6 +9,5 @@ function delete_branch -d 'delete the current git branch locally and remotely'
         git push origin --delete $current
         echo "Removing branch from local"
         git branch -D $current
-
     end
 end

@@ -1,6 +1,6 @@
 # date regex, customised - refer http://www.adminschoice.com/unix-date-format-examples
 # complicated matter,since I don't need timezone
-# set -g theme_date_format "+%A %d %B %Y %l:%M:%S %p"
+set -g theme_date_format "+%a %d %B %Y %l:%M:%S %p"
 
 set -gx GOPATH $HOME/go
 set -gx PATH $PATH $GOPATH/bin
@@ -23,3 +23,7 @@ if [ -f '/Users/kaustubh/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/
 # set -x NDENV_ROOT /usr/local/bin/ndenv
 # set -x PATH $PATH $NDENV_ROOT
 # Might have to switch to zsh :/
+
+set -x NVM_DIR $HOME/.nvm
+set -x GOKOUZOH $GOPATH/src/github.com/kouzoh/
+set -x MCP $HOME/GitHub/mercari
