@@ -1,1 +1,0 @@
-/home/kaustubh/.config/fisherman/bobthefish/fish_title.fish

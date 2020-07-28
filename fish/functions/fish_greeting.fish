@@ -1,1 +1,3 @@
-/home/kaustubh/.config/fisherman/bobthefish/fish_greeting.fish
+function fish_greeting
+	fortune -n 160 | lolcat
+end

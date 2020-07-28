@@ -1,1 +1,0 @@
-/home/kaustubh/.config/fisherman/bass/functions/bass.fish
