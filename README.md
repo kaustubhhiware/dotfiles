@@ -1,4 +1,6 @@
 # dotfiles
+## NOTE: I have moved away from using arch linux, this is only a record, no longer maintained branch
+
 Because dotfiles were getting quite a handful to manage. Here is a collection of my well-documented dotfiles, listing all sources and alternatives.
 
 All .config files needed for UI and UX.
