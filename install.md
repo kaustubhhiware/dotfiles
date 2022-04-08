@@ -22,6 +22,12 @@ screenshot, launchpad, brightness, keyboard brightnes, media, volume
 Contracted:volume, screenshot
 
 Data consumption: https://apps.apple.com/us/app/bandwidth/id490461369?mt=12
+change computer name: https://9to5mac.com/2018/06/20/mac-how-to-change-your-computer-name/
+
+Trackpad: tap to click, secondary click: two fingers, turn on app expose
+
+mini calendar
+
 
 ## Installations
 Install brew
@@ -35,8 +41,30 @@ brew cask install google-chrome
 Set to default, list extensions installed
 Chrome related stuff
 
-Install iterm: https://gist.github.com/squarism/ae3613daf5c01a98ba3a
-https://github.com/gabrielelana/awesome-terminal-fonts/wiki/OS-X
+Install iterm
+https://gist.github.com/squarism/ae3613daf5c01a98ba3a
+https://iterm2colorschemes.com/
+Cursor: vertical bar, blinking
+fonts: https://github.com/powerline/fonts, Source Code pro, bold, 16
+keys: alt d, alt r split shortcuts (tilix habit)
+
+
+git:
+git config
+
+fish
+https://medium.com/tuannguyendotme/set-up-the-fish-shell-on-mac-step-by-step-6a77bcb2687c
+https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts
+
+vscode
+https://formulae.brew.sh/cask/visual-studio-code
+https://itnext.io/settings-sync-with-vs-code-c3d4f126989
+
+https://osxdaily.com/2015/05/25/list-all-applications-mac-os-x/
+
+photoshop
+
+spotmenu
 
 spotify
 spotmenu
@@ -63,6 +91,7 @@ https://www.android.com/filetransfer/
 
 #### Extensions
 picture in picture
+https://github.com/kaustubhhiware/be-limitless
 
 #### Github 2FA
-Add ssh key
+Add ssh key: https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
