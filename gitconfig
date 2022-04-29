@@ -1,9 +1,39 @@
 [user]
-	name = kaustubhhiware
-	email = hiwarekaustubh@googlemail.com
+	name = Kaustubh Hiware
+	email = kaustubh@mercari.com
+	signingkey = 627873F89C080093
 [push]
 	default = simple
-[http]
-	proxy = http://10.3.100.207:8080
-[https]
-	proxy = https://10.3.100.207:8080
+[pull]
+	rebase = false
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+
+[core]
+	editor = nano
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = "code --wait --diff  "
