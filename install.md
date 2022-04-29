@@ -21,6 +21,7 @@ Control strip
 screenshot, launchpad, brightness, keyboard brightnes, media, volume
 Contracted:volume, screenshot
 
+Data consumption: https://apps.apple.com/us/app/bandwidth/id490461369?mt=12
 change computer name: https://9to5mac.com/2018/06/20/mac-how-to-change-your-computer-name/
 
 Trackpad: tap to click, secondary click: two fingers, turn on app expose
@@ -66,13 +67,30 @@ photoshop
 spotmenu
 
 spotify
-
+spotmenu
 spicetify
+https://github.com/khanhas/spicetify-cli
+https://github.com/morpheusthewhite/spicetify-themes/wiki/Themes-preview
 
+mini calendar: via appstore
+
+notion
+
+This website is pretty great: https://sourabhbajaj.com/mac-setup/iTerm/fzf.html
+
+Make list from brew packages, installed list
+wget, curl, htop, node, screenfetch, terminal-notifier, tig
+
+https://github.com/julienXX/terminal-notifier
+https://github.com/kaustubhhiware/NotiFyre
+
+slack, android-file-transfer, firefox, 
+https://www.android.com/filetransfer/
 
 ### Chrome
 
 #### Extensions
+picture in picture
 https://github.com/kaustubhhiware/be-limitless
 
 #### Github 2FA

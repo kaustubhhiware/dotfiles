@@ -195,7 +195,7 @@ Split Vertically with Current Profile</string>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/GitHub/personal/dotfiles/iterm</string>
+	<string>~/GitHub/iterm colors</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{799, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -240,13 +240,9 @@ Split Vertically with Current Profile</string>
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
-	<string>440 434 799 448 0 0 1680 1027 </string>
-	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>530 476 620 392 0 0 1680 1027 </string>
+	<string>496 486 799 448 0 0 1792 1097 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 475 810 552 0 0 1680 1027 </string>
-	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 0 1680 1027 0 0 1680 1027 </string>
+	<string>0 13 1791 1084 0 0 1792 1097 </string>
 	<key>NeverWarnAboutShortLivedSessions_4CF7FEE1-634C-4A9D-8683-D42414456CD8</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_4CF7FEE1-634C-4A9D-8683-D42414456CD8_selection</key>
@@ -256,6 +252,8 @@ Split Vertically with Current Profile</string>
 		<dict>
 			<key>ASCII Anti Aliased</key>
 			<true/>
+			<key>ASCII Ligatures</key>
+			<false/>
 			<key>AWDS Pane Directory</key>
 			<string></string>
 			<key>AWDS Pane Option</key>
@@ -887,9 +885,11 @@ Split Vertically with Current Profile</string>
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>SourceCodeProForPowerline-ExtraLight 12</string>
+			<string>SourceCodeProForPowerline-Bold 16</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
+			<key>Non-ASCII Ligatures</key>
+			<false/>
 			<key>Normal Font</key>
 			<string>SourceCodeProForPowerline-Bold 16</string>
 			<key>Only The Default BG Color Uses Transparency</key>
@@ -972,41 +972,27 @@ Split Vertically with Current Profile</string>
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.3.11</string>
-		<string>3.3.8</string>
-		<string>3.3.6</string>
 		<string>3.3.12</string>
-		<string>3.3.5</string>
-		<string>3.3.7</string>
-		<string>3.3.9</string>
-		<string>3.3.4</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
 		<string>Source Code Pro for Powerline</string>
-		<string>Monaco</string>
-		<string>PT Mono</string>
-		<string>Andale Mono</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {1680, 1050}}</string>
+		<string>{{0, 0}, {1792, 1120}}</string>
 		<key>topLeft</key>
-		<string>{232, 897}</string>
+		<string>{472, 839}</string>
 	</dict>
-	<key>NoSyncHaveUsedCopyMode</key>
-	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>B4B731CA-E2B1-473F-9321-A5DAB2CC82CC</string>
+	<string>8B06EA8A-0E0C-4982-A2C3-ECDE2600FF6F</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>144</integer>
+	<integer>3</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
-	<real>591899911.40657902</real>
+	<real>617809913.59190297</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
 	<true/>
-	<key>NoSyncPermissionToShowTip</key>
-	<false/>
 	<key>NoSyncRecordedVariables</key>
 	<dict>
 		<key>0</key>
@@ -1429,14 +1415,6 @@ Split Vertically with Current Profile</string>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentTab.currentSession.path</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
 				<string>currentTab.currentSession.commandLine</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -1445,7 +1423,7 @@ Split Vertically with Current Profile</string>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentTab.currentSession.hostname</string>
+				<string>currentTab.currentSession.path</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -1453,7 +1431,7 @@ Split Vertically with Current Profile</string>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentTab.titleOverrideFormat</string>
+				<string>currentTab.currentSession.hostname</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -1722,7 +1700,7 @@ Split Vertically with Current Profile</string>
 		</array>
 	</dict>
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
-	<real>591601197.86992097</real>
+	<real>617637113.59175098</real>
 	<key>PMPrintingExpandedStateForPrint2</key>
 	<false/>
 	<key>PointerActions</key>
@@ -1759,7 +1737,7 @@ Split Vertically with Current Profile</string>
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/kaustubh/GitHub/personal/dotfiles/iterm</string>
+	<string>/Users/kaustubh/GitHub/dotfiles/iterm</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
@@ -1767,16 +1745,12 @@ Split Vertically with Current Profile</string>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final_new.xml?shard=10</string>
+	<string>https://iterm2.com/appcasts/final_new.xml?shard=61</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-07-27T18:14:50Z</date>
+	<date>2020-07-28T15:15:51Z</date>
 	<key>SUSendProfileInfo</key>
-	<false/>
-	<key>SUUpdateGroupIdentifier</key>
-	<integer>925048932</integer>
-	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>SeparateStatusBarsPerPane</key>
 	<false/>
@@ -1790,8 +1764,6 @@ Split Vertically with Current Profile</string>
 	<integer>9</integer>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>4</integer>
-	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1594872704</real>
 	<key>UseBorder</key>
 	<true/>
 	<key>VisualIndicatorForEsc</key>
