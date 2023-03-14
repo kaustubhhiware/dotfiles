@@ -5,8 +5,6 @@ function delete_branch -d 'delete the current git branch locally and remotely'
         echo "Are you fu**ing serious ?"
     else
         git checkout master
-        echo "Removing branch from remote"
-        git push origin --delete $current
         echo "Removing branch from local"
         git branch -D $current
     end

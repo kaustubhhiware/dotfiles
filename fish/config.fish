@@ -6,11 +6,11 @@ set -gx GOPATH $HOME/go
 set -gx PATH $PATH $GOPATH/bin
 
 # Anaconda
-set -x PATH $PATH /usr/local/anaconda3/bin
+# set -x PATH $PATH /usr/local/anaconda3/bin
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-eval /usr/local/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+# eval /usr/local/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 
 
