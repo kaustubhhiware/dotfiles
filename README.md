@@ -1,8 +1,7 @@
 # dotfiles
 
-Attempting to log config files.
+Attempting to log config files. Mostly [fish functions](fish/functions/)
 
-ToDo: Add screenshot(s)
 
 ## Note: Linux
 I used Linux (ubuntu, arch linux) until July 2020, before migrating to Mac. Config files for linux are available on the [linux branch](https://github.com/kaustubhhiware/dotfiles/tree/linux)
