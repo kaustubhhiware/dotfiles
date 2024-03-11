@@ -1,7 +1,7 @@
 [user]
 	name = Kaustubh Hiware
-	email = kaustubh@mercari.com
-	signingkey = 627873F89C080093
+	email = hiwarekaustubh@gmail.com
+	# signingkey = 627873F89C080093
 [push]
 	default = simple
 [pull]
