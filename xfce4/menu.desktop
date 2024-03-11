@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Name=Menu
-Icon=/usr/share/icons/ubuntu_flat.png
-Exec=xfce4-popup-whiskermenu -p
-Comment=Main Menu
-Categories=Development;IDE;
-Terminal=false
