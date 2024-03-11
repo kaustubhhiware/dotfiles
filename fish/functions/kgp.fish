@@ -1,3 +1,4 @@
 function kgp -d 'alias for `kubectl get pods`'
-    kubectl get pods $argv
+    set project (gcloud config get project)
+    kubectl -n $project get pods $argv
 end
