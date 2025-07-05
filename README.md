@@ -2,6 +2,13 @@
 
 Attempting to log config files. Mostly [fish functions](fish/functions/)
 
+## Sync checklist
+- [ ] Brew packages
+    * `brew bundle dump --global --force`
+- [ ] Fish functions
+- [ ]  Git config
+
+![](images/Screenshot%202025-07-05%20at%204.52.11 AM.png)
 
 ## Note: Linux
 I used Linux (ubuntu, arch linux) until July 2020, before migrating to Mac. Config files for linux are available on the [linux branch](https://github.com/kaustubhhiware/dotfiles/tree/linux)
