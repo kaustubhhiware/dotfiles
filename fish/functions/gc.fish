@@ -1,5 +1,3 @@
-# using abbr instead.
-# abbr --add gc git commit
-# function gc -d 'alias for `git commit`'
-#     git commit $argv
-# end
+function gc -d 'alias for `git commit -S`'
+    git commit -S $argv
+end
