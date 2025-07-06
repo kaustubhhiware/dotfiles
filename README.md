@@ -5,8 +5,8 @@ Attempting to log config files. Mostly [fish functions](fish/functions/)
 ## Sync checklist
 ```
 sh scripts/brew-export.sh
-bash scripts/fish-export.sh
-# git config
+sh scripts/fish-export.sh
+sh scripts/git-export.sh
 # new configs
 ```
 
