@@ -9,14 +9,14 @@ SOURCE_CONFIG="$SOURCE_DIR/config.fish"
 DEST_CONFIG="$DEST_DIR/config.fish"
 
 if ! cmp -s "$SOURCE_CONFIG" "$DEST_CONFIG"; then
-    echo "Different content: config.fish"
+    echo ">> Different content: config.fish"
     diff -u "$DEST_CONFIG" "$SOURCE_CONFIG" | diff-so-fancy
     echo ""
 else
-    echo "config.fish files are identical"
+    echo ">> config.fish files are identical"
 fi
 
-echo "Comparing functions folder..."
+echo ">> Comparing functions folder..."
 
 FUNCTIONS_SOURCE="$SOURCE_DIR/functions"
 FUNCTIONS_DEST="$DEST_DIR/functions"
@@ -27,11 +27,11 @@ for source_file in "$FUNCTIONS_SOURCE"/*.fish; do
         dest_file="$FUNCTIONS_DEST/$filename"
         
         if [ ! -f "$dest_file" ]; then
-            echo "Missing in destination: $filename - copying..."
+            echo ">> Missing in destination: $filename - copying..."
             cp "$source_file" "$dest_file"
         elif ! cmp -s "$source_file" "$dest_file"; then
-            echo "Different content: $filename"
-            echo "Showing diff using diff-so-fancy:"
+            echo ">> Different content: $filename"
+            echo ">> Showing diff using diff-so-fancy:"
             diff -u "$dest_file" "$source_file" | diff-so-fancy
             echo ""
         fi
@@ -45,7 +45,7 @@ for dest_file in "$FUNCTIONS_DEST"/*.fish; do
         source_file="$FUNCTIONS_SOURCE/$filename"
         
         if [ ! -f "$source_file" ]; then
-            echo "Extra in destination: $filename"
+            echo ">> Extra in destination: $filename"
         fi
     fi
 done

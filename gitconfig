@@ -1,7 +1,7 @@
 [user]
 	name = Kaustubh Hiware
 	email = hiwarekaustubh@gmail.com
-	# signingkey = 627873F89C080093
+	# signingkey = <key>
 [push]
 	default = simple
 [pull]
@@ -37,3 +37,20 @@
 	tool = vscode
 [difftool "vscode"]
 	cmd = "code --wait --diff  "
+
+[log]
+	abbrevCommit = true
+	graphColors = blue,yellow,cyan,magenta,green,red
+[branch]
+	sort = -committerdate
+[color "decorate"]
+	HEAD = red
+	branch = blue
+	tag = yellow
+	remoteBranch = magenta
+[color "branch"]
+	current = magenta
+	local = default
+	remote = yellow
+	upstream = green
+	plain = blue
