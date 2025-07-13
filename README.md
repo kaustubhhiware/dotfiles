@@ -4,10 +4,10 @@ Attempting to log config files. Mostly [fish functions](fish/functions/)
 
 ## Sync checklist
 ```
+sh scripts/apps-export.sh
 sh scripts/brew-export.sh
 sh scripts/fish-export.sh
 sh scripts/git-export.sh
-# new configs
 ```
 
 ![](images/Screenshot%202025-07-05%20at%204.52.11 AM.png)
