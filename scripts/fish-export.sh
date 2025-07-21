@@ -12,7 +12,9 @@ DEST_DIR=./fish/
 
 # BOSSMAN wouldn't like me pushing these files to an open repository
 IGNORE_FILES=(
+    "kdev.fish"
     "kp.fish"
+    "kprod.fish"
     "mat.fish"
     "pat.fish"
 )
