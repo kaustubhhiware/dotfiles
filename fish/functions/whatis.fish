@@ -7,7 +7,7 @@ function whatis --description 'Print the description of a Fish function.'
   # Check that $argv is not empty
   if test (count $argv) -eq 0;
     whatis whatis;
-    printf 'Usage: whatis { --all | function }\n'
+    printf '>> Usage: whatis { --all | function }\n'
     return 1
   end
 
@@ -21,18 +21,18 @@ function whatis --description 'Print the description of a Fish function.'
   else
     # Check that $argv is indeed a Fish function
     if not functions -q $argv
-      printf '"%s" is not a function.\n' $argv
+      printf '>> "%s" is not a function.\n' $argv
       return 1
     end
 
     # Check that the function has a description
     if not functions $argv | grep -q -e 'function '$argv' .*--description'
-      printf 'The function "%s" has no description.\n' $argv
+      printf '>> The function "%s" has no description.\n' $argv
       return 2
     end
 
     # Print description
-    printf '%s\t- %s\n' $argv (functions $argv | \
+    printf '>> %s\t- %s\n' $argv (functions $argv | \
       grep 'function '$argv'.*--description' | sed -E "s|.*'(.*)'.*|\1|")
   end
 end
