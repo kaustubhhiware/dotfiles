@@ -1,4 +1,4 @@
-function delete_branch -d 'delete the current git branch locally and remotely'
+function delete_branch -d 'delete the current git branch locally'
     set current (git branch | grep \* | cut -d ' ' -f2)
     set main_branch master
     if git branch --list main | grep -q main
@@ -10,6 +10,7 @@ function delete_branch -d 'delete the current git branch locally and remotely'
     else
         git checkout $main_branch
         echo ">> Removing branch from local"
-        git branch -D $current
+        # only delete fully merged branch
+        git branch -d $current
     end
 end
