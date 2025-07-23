@@ -1,3 +1,3 @@
-function l -d 'alias for `clear`, because Im too lazy'
+function l -d 'alias for `clear`'
     clear
 end
