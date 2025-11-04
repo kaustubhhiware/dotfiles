@@ -4,9 +4,8 @@
 # These packages will be ignored in diff.
 # Don't commit them to a public repo, or else BOSSMAN comes knocking.
 
-TEMP_BREWFILE=$(mktemp)
-SORTED_EXISTING=$(mktemp)
-SORTED_CURRENT=$(mktemp)
+TEMP_BREWFILE="tmp_brewfile"
+SORTED_CURRENT="sorted_brewfile"
 
 brew bundle dump --file="$TEMP_BREWFILE"
 

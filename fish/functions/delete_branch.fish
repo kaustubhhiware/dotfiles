@@ -10,7 +10,6 @@ function delete_branch -d 'delete the current git branch locally'
     else
         git checkout $main_branch
         echo ">> Removing branch from local"
-        # only delete fully merged branch
-        git branch -d $current
+        git branch -D $current
     end
 end

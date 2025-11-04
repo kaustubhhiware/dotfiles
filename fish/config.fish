@@ -29,3 +29,4 @@ abbr --add gd git diff
 
 fzf --fish | source
 zoxide init fish | source
+thefuck --alias | source

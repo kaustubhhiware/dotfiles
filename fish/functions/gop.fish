@@ -3,5 +3,5 @@ function gop -d 'open this github repository on browser'
         echo ">> Not a git repo, dumbass"
         return 1
     end
-    open $(git remote get-url origin | sed 's|git@github.com:|https://github.com/|' | sed 's|\.git$||')
+    open $(git remote get-url origin | sed 's|ssh://git@|https://|' | sed 's|\.git$||')
 end

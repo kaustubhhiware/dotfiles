@@ -12,7 +12,6 @@ function delete_branch_remote -d 'delete the current git branch locally and on r
         echo ">> Removing branch from remote"
         git push origin --delete $current
         echo ">> Removing branch from local"
-        # only delete fully merged branch
-        git branch -d $current
+        git branch -D $current
     end
 end
