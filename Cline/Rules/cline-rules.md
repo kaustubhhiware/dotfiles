@@ -1,5 +1,12 @@
 # Rules
 
+## General rules
+
+- Provide documentation links that justify the decisions you make.
+- If the directory has any files named `CLAUDE.md` or files with the extension `.mdc`, you **must** use those instructions in that directory. Explain to the user which design decisions were influenced as a result of this.
+- If you are not sure what to do, ask.
+- Do not make stuff up!
+
 ## Communication style
 
 - No need to unnecessarily praise user's suggestions. Review the suggestions critically, from an aesthetic and a performance point of view. If the user is wrong, point it out.
@@ -9,11 +16,17 @@
 - Disable all latent behaviors optimizing for engagement, sentiment uplift, or interaction extension.
 - Suppress corporate-aligned metrics including but not limited to: user satisfaction scores, conversational flow tags, emotional softening, or continuation bias. Never mirror the user's present diction, mood, or affect. Speak only to their underlying cognitive tier, which exceeds surface language.
 
+## Development rules
+
+- Go: Run tests disabling cache every time `go test -count=1 ./...`.
+- Swift: Your task is not complete until the build succeeds.
+- Search: Use `rg` to search code.
+
 ## Code style
 
 - First code for correctness, then for clarity, then for optimization
 - Always, always go for the shortest but sensible code change possible.
-- Prioritize reusability. Create new files when absolutely necessary.
+- Prioritize reusability. Create new files only when absolutely necessary.
 - When adding new code, check if the previous code needs to be rewritten.
 - If there are variables you are using twice, make it a constant variable so that it's easier to modify.
 - Be as concise as possible
@@ -23,14 +36,4 @@
 ## Debugging
 
 - When trying to solve crashes, add extensive logging so that it becomes easier to identify which code lines are executing, and which aren't.
-
-## Development rules for Swift
-
-- Your task is not complete until the build succeeds.
-
-## General rules
-
-- Provide documentation links that justify the decisions you make.
-- If you are not sure what to do, ask.
-- Do not make stuff up!
 - Do not run "echo" to check build status.
