@@ -2,6 +2,10 @@
 background-opacity = 0.95
 cursor-color = #ff00ff
 font-family = Source Code Pro Bold for Powerline
+font-size = 16
+font-style = Bold
+font-thicken = true
+font-thicken-strength = 255
 macos-icon = custom-style
 macos-icon-frame = aluminum
 macos-icon-ghost-color = DarkGreen
