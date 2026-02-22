@@ -1,0 +1,28 @@
+# visual
+background-opacity = 0.95
+cursor-color = #ff00ff
+font-family = Source Code Pro Bold for Powerline
+macos-icon = custom-style
+macos-icon-frame = aluminum
+macos-icon-ghost-color = DarkGreen
+macos-icon-screen-color = black
+theme = Solarized Dark Higher Contrast
+window-theme = ghostty
+# window-titlebar-background
+window-titlebar-foreground = ForestGreen
+
+# keys
+macos-option-as-alt = true
+keybind = opt+d=new_split:down
+keybind = opt+r=new_split:right
+
+# behaviors
+auto-update = check
+quit-after-last-window-closed = true
+
+
+# missing features from iterm2
+## big deal
+# search within terminal
+## meh
+# color tabs
