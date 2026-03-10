@@ -11,10 +11,6 @@
 # Optional parameters:
 # @raycast.description Copy your phone number to clipboard
 
-# Documentation:
-# @raycast.author Kaustubh
-# @raycast.authorURL https://raycast.com/kaustubh
-
 # Replace with your actual phone number
 PHONE_NUMBER="oh-brother"
 

@@ -11,10 +11,6 @@
 # Optional parameters:
 # @raycast.description Copy your personal website URL to clipboard
 
-# Documentation:
-# @raycast.author Kaustubh
-# @raycast.authorURL https://raycast.com/kaustubh
-
 # Replace with your actual website URL
 WEBSITE_URL="https://kaustubhhiware.in"
 

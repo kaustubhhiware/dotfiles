@@ -11,10 +11,6 @@
 # Optional parameters:
 # @raycast.description Copy your Twitter profile URL to clipboard
 
-# Documentation:
-# @raycast.author Kaustubh
-# @raycast.authorURL https://raycast.com/kaustubh
-
 # Replace with your actual Twitter URL
 TWITTER_URL="https://x.com/_ofkaus"
 

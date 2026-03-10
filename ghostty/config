@@ -11,7 +11,9 @@ macos-icon-frame = aluminum
 macos-icon-ghost-color = DarkGreen
 macos-icon-screen-color = black
 theme = Solarized Dark Higher Contrast
+window-padding-color = extend
 window-theme = ghostty
+
 # window-titlebar-background
 window-titlebar-foreground = ForestGreen
 

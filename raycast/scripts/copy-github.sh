@@ -11,10 +11,6 @@
 # Optional parameters:
 # @raycast.description Copy your GitHub profile URL to clipboard
 
-# Documentation:
-# @raycast.author Kaustubh
-# @raycast.authorURL https://raycast.com/kaustubh
-
 # Replace with your actual GitHub URL
 GITHUB_URL="https://github.com/kaustubhhiware"
 
