@@ -1,5 +1,6 @@
 # date regex, customised - refer http://www.adminschoice.com/unix-date-format-examples
 # complicated matter,since I don't need timezone
+set -g theme_date_timezone (readlink /etc/localtime | string replace '/var/db/timezone/zoneinfo/' '')
 set -g theme_date_format "+%a %d %B %Y %l:%M %p"
 
 set -gx GOPATH $HOME/go
