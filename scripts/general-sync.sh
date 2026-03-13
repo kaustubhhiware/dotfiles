@@ -28,6 +28,7 @@ FILES=(
     ".claude/keybindings.json:claude/keybindings.json"
     ".claude/settings.json:claude/settings.json"
     ".claude/statusline.sh:claude/statusline.sh"
+    ".config/ccstatusline/settings.json:ccstatusline/settings.json"
     ".gitconfig:gitconfig"
 )
 
@@ -39,7 +40,6 @@ FOLDERS=(
     ".config/fish:fish"
     ".config/ghostty:ghostty"
     ".config/raycast/scripts:raycast/scripts"
-    "Documents/Cline:Cline"
 )
 
 FOLDERS_IGNORE=(
@@ -56,15 +56,6 @@ IGNORE_FILES=(
     ".state.json" # peon
 )
 
-# "label|source_path|dest_path|origin"  (origin: FILE or folder src_rel)
-PAIRS=()
-
-for entry in "${FILES[@]}"; do
-    IFS=':' read -r src_rel dest_rel <<< "$entry"
-    is_ignored_file "$src_rel" && continue
-    PAIRS+=("$src_rel|$SOURCE_DIR/$src_rel|$DEST_DIR/$dest_rel|FILE")
-done
-
 has_ignored_component() {
     local path="$1"
     for ignore in "${FOLDERS_IGNORE[@]}"; do
@@ -79,6 +70,15 @@ is_ignored_file() {
     [[ " ${IGNORE_FILES[*]} " =~ " ${filename} " ]] && return 0
     return 1
 }
+
+# "label|source_path|dest_path|origin"  (origin: FILE or folder src_rel)
+PAIRS=()
+
+for entry in "${FILES[@]}"; do
+    IFS=':' read -r src_rel dest_rel <<< "$entry"
+    is_ignored_file "$src_rel" && continue
+    PAIRS+=("$src_rel|$SOURCE_DIR/$src_rel|$DEST_DIR/$dest_rel|FILE")
+done
 
 for entry in "${FOLDERS[@]}"; do
     IFS=':' read -r src_rel dest_rel <<< "$entry"

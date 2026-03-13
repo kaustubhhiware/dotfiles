@@ -10,7 +10,7 @@
 
 ## What was
 
-Aka, the user can uninstall Arch, but how will you uninstall Arch from the user. I _used_ Arch btw.
+Aka, the user can uninstall Arch, but you can't uninstall Arch from the user. I _used_ Arch btw.
 
 ./Screenshot_2020-07-26_17-11-59.png
 

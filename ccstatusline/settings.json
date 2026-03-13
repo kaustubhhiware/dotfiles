@@ -1,0 +1,52 @@
+{
+  "version": 3,
+  "lines": [
+    [
+      {
+        "id": "1",
+        "type": "git-root-dir",
+        "color": "brightWhite",
+        "backgroundColor": "bgBlack",
+        "bold": false
+      },
+      {
+        "id": "7",
+        "type": "model",
+        "color": "brightWhite",
+        "backgroundColor": "bgBrightBlack",
+        "bold": false
+      },
+      {
+        "id": "fef4c3e5-ccdd-4a86-80ef-6d6982d50a7d",
+        "type": "custom-command",
+        "backgroundColor": "brightWhite",
+        "commandPath": "bash ~/.claude/colored-usage.sh",
+        "preserveColors": true,
+        "timeout": 5000
+      }
+    ],
+    [],
+    []
+  ],
+  "flexMode": "full-minus-40",
+  "compactThreshold": 60,
+  "colorLevel": 2,
+  "defaultPadding": " ",
+  "inheritSeparatorColors": false,
+  "globalBold": false,
+  "powerline": {
+    "enabled": true,
+    "separators": [
+      ""
+    ],
+    "separatorInvertBackground": [
+      false
+    ],
+    "startCaps": [],
+    "endCaps": [
+      ""
+    ],
+    "theme": "custom",
+    "autoAlign": false
+  }
+}
