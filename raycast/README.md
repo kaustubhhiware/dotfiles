@@ -1,4 +1,5 @@
-## Raycast
+# Raycast
+
 https://www.raycast.com/
 
 A better Spotlight.

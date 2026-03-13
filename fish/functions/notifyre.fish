@@ -23,7 +23,6 @@ function notifyre -d 'daemon function to provide notifications'
                 -timeout 5 -closeLabel "Gotcha!"
         end
 
-
         if test $CMD_DURATION -gt (math "1000 * $ring_timeout") # time set for ring
             set secs (math "$CMD_DURATION / 1000")
             afplay $ALERT
