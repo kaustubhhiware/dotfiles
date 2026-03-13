@@ -29,6 +29,6 @@ quit-after-last-window-closed = true
 
 # missing features from iterm2
 ## big deal
-# search within terminal
+### none
 ## meh
-# color tabs
+### color tabs
