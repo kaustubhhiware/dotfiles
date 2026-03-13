@@ -7,7 +7,8 @@ Made this custom fish function for color coded claude usage [../fish/functions/c
 ![../images/claude_cst_fish.png](../images/claude_cst_fish.png)
 
 Claude session looks like this, git branch shows status like [fish's bobthefish](https://github.com/oh-my-fish/theme-bobthefish).
-
-![../images/claude.png](../images/claude.png)
+The following images shows 3 states: git clean, git staged and git dirty.
 
 Needs [ccstatusline](https://github.com/sirmalloc/ccstatusline).
+
+![../images/claude.png](../images/claude.png)

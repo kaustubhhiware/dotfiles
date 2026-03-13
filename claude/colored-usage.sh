@@ -9,11 +9,13 @@ cwd=$(echo "$input" | jq -r '.workspace.current_dir // .cwd // empty' 2>/dev/nul
 # Git branch + status
 git_branch=""
 git_dirty=false
+git_staged=false
 git_ahead=false
 if git -C "$cwd" rev-parse --is-inside-work-tree --no-optional-locks 2>/dev/null | grep -q true; then
   git_branch=$(git -C "$cwd" --no-optional-locks symbolic-ref --short HEAD 2>/dev/null \
                || git -C "$cwd" --no-optional-locks rev-parse --short HEAD 2>/dev/null)
-  [ -n "$(git -C "$cwd" --no-optional-locks status --porcelain 2>/dev/null)" ] && git_dirty=true
+  [ -n "$(git -C "$cwd" --no-optional-locks diff --name-only 2>/dev/null)" ] && git_dirty=true
+  [ -n "$(git -C "$cwd" --no-optional-locks diff --cached --name-only 2>/dev/null)" ] && git_staged=true
   ahead=$(git -C "$cwd" --no-optional-locks rev-list "@{u}..HEAD" --count 2>/dev/null)
   [ -n "$ahead" ] && [ "$ahead" -gt 0 ] 2>/dev/null && git_ahead=true
 fi
@@ -58,7 +60,7 @@ if $needs_refresh; then
       t=$(echo "$raw" | jq -r '.claudeAiOauth.accessToken // empty' 2>/dev/null)
       if [ -z "$t" ] && echo "$raw" | grep -qE '^[A-Za-z0-9_\-\.]+$'; then t="$raw"; fi
       if [ -n "$t" ]; then token="$t"; break; fi
-    done < <(/usr/bin/security dump-keychain 2>/dev/null \
+    done < <(timeout 3 /usr/bin/security dump-keychain 2>/dev/null \
               | grep '"svce"' | grep -i 'claude' | awk -F'"' '{print $4}' | grep -v "^Claude Code-cBG_REDentials$")
   fi
   if [ -n "$token" ]; then
@@ -88,14 +90,13 @@ ARROW=$'\xee\x82\xb0'  # U+E0B0 powerline right-pointing solid arrow
 # https://misc.flogisoft.com/bash/tip_colors_and_formatting
 FG_RED=$'\033[38;5;9m'         BG_RED=$'\033[48;5;9m'
 FG_ORANGE=$'\033[38;5;208m' BG_ORANGE=$'\033[48;5;208m'
+FG_STAGED=$'\033[38;5;214m' BG_STAGED=$'\033[48;5;214m'  # bobthefish staged color
 FG_YELLOW=$'\033[38;5;178m' BG_YELLOW=$'\033[48;5;178m'
 FG_GREEN=$'\033[38;5;114m'   BG_GREEN=$'\033[48;5;114m'
-FG_BRANCH=$'\033[38;5;148m' BG_BRANCH=$'\033[48;5;148m'  # bobthefish branch color
-FG_WHITE=$'\033[97m'
-FG_BLACK=$'\033[30m'
-BG_BLACK=$'\033[48;5;16m'
+FG_PARROT=$'\033[38;5;148m' BG_PARROT=$'\033[48;5;148m'  # bobthefish clean color
+FG_WHITE=$'\033[97m' BG_WHITE=$'\033[48;5;15m'
+FG_BLACK=$'\033[30m' BG_BLACK=$'\033[48;5;16m'
 BG_GRAY=$'\033[48;5;244m'
-BG_WHITE=$'\033[48;5;15m'
 
 pct_bg()  {
   local p=$1
@@ -124,48 +125,50 @@ add_seg() { S_BG+=("$1"); S_AFG+=("$2"); S_TFG+=("$3"); S_CON+=("$4"); }
 if [ -n "$git_branch" ]; then
   git_content="$git_branch"
   if $git_dirty; then
-    git_bg="$BG_RED"; git_afg="$BG_RED"; git_tfg="$FG_WHITE"
+    git_bg="$BG_RED"; git_afg="$FG_RED"; git_tfg="$FG_WHITE"
+  elif $git_staged; then
+    git_bg="$BG_STAGED"; git_afg="$FG_STAGED"; git_tfg="$FG_BLACK"
   else
-    git_bg="$BRANCH"; git_afg="$BRANCH"; git_tfg="$FG_BLACK"
+    git_bg="$BG_PARROT"; git_afg="$FG_PARROT"; git_tfg="$FG_BLACK"
     $git_ahead && git_content="${git_branch} +"
   fi
   add_seg "$git_bg" "$git_afg" "$git_tfg" "⎇ $git_content"
 fi
 
 # commented out: colored bgs too
-# [ -n "$ctx_pct"  ] && add_seg "$(pct_bg "$ctx_pct")"  "$(pct_afg "$ctx_pct")"  "$(pct_tfg "$ctx_pct")"  "ctx: ${ctx_pct}%"
-# [ -n "$cur_pct"  ] && add_seg "$(pct_bg "$cur_pct")"  "$(pct_afg "$cur_pct")"  "$(pct_tfg "$cur_pct")"  "5h: ${cur_pct}%"
-# [ -n "$week_pct" ] && add_seg "$(pct_bg "$week_pct")" "$(pct_afg "$week_pct")" "$(pct_tfg "$week_pct")" "7d: ${week_pct}%"
-# # Render: leading space, then each segment (arrow between consecutive segments)
-# out=" "
-# prev_afg=""
-# for i in "${!S_CON[@]}"; do
-#   bg="${S_BG[$i]}"  afg="${S_AFG[$i]}"  tfg="${S_TFG[$i]}"  con="${S_CON[$i]}"
-#   [ -n "$prev_afg" ] && out+="${bg}${prev_afg}${ARROW}"
-#   out+="${bg}${tfg} ${con} "
-#   prev_afg="$afg"
-# done
-
-# # Trailing arrow back to terminal default bg
-# [ -n "$prev_afg" ] && out+="${R}${prev_afg}${ARROW}${R}"
-
-# alt: colored fg, bg is monokai
-[ -n "$ctx_pct"  ] && add_seg "$BG_BLACK"  "$BG_BLACK"  "$(pct_afg "$ctx_pct")"  "ctx: ${ctx_pct}%"
-[ -n "$cur_pct"  ] && add_seg "$BG_BLACK"  "$BG_BLACK"  "$(pct_afg "$cur_pct")"  "5h: ${cur_pct}%"
-[ -n "$week_pct" ] && add_seg "$BG_BLACK" "$BG_BLACK" "$(pct_afg "$week_pct")" "7d: ${week_pct}%"
-
+[ -n "$ctx_pct"  ] && add_seg "$(pct_bg "$ctx_pct")"  "$(pct_afg "$ctx_pct")"  "$(pct_tfg "$ctx_pct")"  "ctx: ${ctx_pct}%"
+[ -n "$cur_pct"  ] && add_seg "$(pct_bg "$cur_pct")"  "$(pct_afg "$cur_pct")"  "$(pct_tfg "$cur_pct")"  "5h: ${cur_pct}%"
+[ -n "$week_pct" ] && add_seg "$(pct_bg "$week_pct")" "$(pct_afg "$week_pct")" "$(pct_tfg "$week_pct")" "7d: ${week_pct}%"
 # Render: leading space, then each segment (arrow between consecutive segments)
-out=""
+out=" "
 prev_afg=""
 for i in "${!S_CON[@]}"; do
   bg="${S_BG[$i]}"  afg="${S_AFG[$i]}"  tfg="${S_TFG[$i]}"  con="${S_CON[$i]}"
-  [ -n "$prev_afg" ] && out+="${bg}${$BG_BLACK}${ARROW}"
+  [ -n "$prev_afg" ] && out+="${bg}${prev_afg}${ARROW}"
   out+="${bg}${tfg} ${con} "
   prev_afg="$afg"
 done
 
 # Trailing arrow back to terminal default bg
-[ -n "$prev_afg" ] && out+="${R}${$BG_BLACK}${ARROW}${R}"
+[ -n "$prev_afg" ] && out+="${R}${prev_afg}${ARROW}${R}"
+
+# alt: colored fg, bg is monokai
+# [ -n "$ctx_pct"  ] && add_seg "$BG_BLACK"  "$BG_BLACK"  "$(pct_afg "$ctx_pct")"  "ctx: ${ctx_pct}%"
+# [ -n "$cur_pct"  ] && add_seg "$BG_BLACK"  "$BG_BLACK"  "$(pct_afg "$cur_pct")"  "5h: ${cur_pct}%"
+# [ -n "$week_pct" ] && add_seg "$BG_BLACK" "$BG_BLACK" "$(pct_afg "$week_pct")" "7d: ${week_pct}%"
+
+# # Render: leading space, then each segment (arrow between consecutive segments)
+# out=""
+# prev_afg=""
+# for i in "${!S_CON[@]}"; do
+#   bg="${S_BG[$i]}"  afg="${S_AFG[$i]}"  tfg="${S_TFG[$i]}"  con="${S_CON[$i]}"
+#   [ -n "$prev_afg" ] && out+="${bg}${BG_BLACK}${ARROW}"
+#   out+="${bg}${tfg} ${con} "
+#   prev_afg="$afg"
+# done
+
+# # Trailing arrow back to terminal default bg
+# [ -n "$prev_afg" ] && out+="${R}${BG_BLACK}${ARROW}${R}"
 
 printf "%s\n" "$out"
 exit 0
