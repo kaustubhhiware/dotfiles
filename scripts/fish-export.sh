@@ -71,3 +71,5 @@ for dest_file in "$FUNCTIONS_DEST"/*.fish; do
         fi
     fi
 done
+
+echo "|> Fish export script completed"

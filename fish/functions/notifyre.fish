@@ -18,9 +18,11 @@ function notifyre -d 'daemon function to provide notifications'
             set secs (math "$CMD_DURATION / 1000")
             # command notify-send "Terminal in "(prompt_pwd) "$history[1] completed in $secs seconds" -i $ICON 
             # -t 2
-		terminal-notifier -title "$history[1]" \
-        -subtitle "Terminal in "(prompt_pwd) -message "Completed in $secs seconds"
+            terminal-notifier -title "$history[1]" \
+                -subtitle "Terminal in "(prompt_pwd) -message "Completed in $secs seconds" \
+                -timeout 5 -closeLabel "Gotcha!"
         end
+
 
         if test $CMD_DURATION -gt (math "1000 * $ring_timeout") # time set for ring
             set secs (math "$CMD_DURATION / 1000")

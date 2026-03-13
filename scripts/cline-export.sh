@@ -41,4 +41,4 @@ else
     echo ">> Warning: Workflows directory not found at ${SOURCE_DIR}${WORKFLOW_IMPORT_DIR}"
 fi
 
-echo "|> Cline export completed!"
+echo "|> Cline export completed"

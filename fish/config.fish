@@ -24,6 +24,9 @@ abbr --add k8 redacted
 abbr --add tf redacted
 abbr --add plat redacted
 
+# https://ntfy.sh/#pricing
+export NTFY_TOPIC=little-carpentry-cable
+
 abbr --add gb git branch
 abbr --add gd git diff
 

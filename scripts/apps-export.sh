@@ -10,4 +10,4 @@
     brew list --cask 2>/dev/null
 } | sort -u > Appfile
 
-echo ">> Applications list saved to Appfile"
+echo "|> Applications list saved to Appfile"

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sort -o Brewfile Brewfile
+
 # BOSSMAN is system variable, containing packages installed for BOSSMAN
 # These packages will be ignored in diff.
 # Don't commit them to a public repo, or else BOSSMAN comes knocking.
@@ -27,3 +29,4 @@ sort "$TEMP_BREWFILE" | grep -v "$BOSSMAN" > "$SORTED_CURRENT"
 diff -u Brewfile "$SORTED_CURRENT" | diff-so-fancy
 
 rm "$TEMP_BREWFILE" "$SORTED_CURRENT"
+echo "|> Brew packages list saved to Brewfile"

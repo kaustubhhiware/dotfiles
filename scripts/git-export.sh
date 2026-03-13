@@ -8,3 +8,5 @@ if ! cmp -s "$SOURCE_CONFIG" "$DEST_CONFIG"; then
 else
     echo ">> gitconfigs are identical"
 fi
+
+echo "|> Git export script completed"
