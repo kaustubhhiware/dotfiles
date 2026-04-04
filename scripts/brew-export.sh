@@ -28,5 +28,7 @@ sort "$TEMP_BREWFILE" | grep -v "$BOSSMAN" > "$SORTED_CURRENT"
 # Assumes Brewfile is kept sorted
 diff -u Brewfile "$SORTED_CURRENT" | diff-so-fancy
 
+# Merge: keep existing Brewfile entries, add new ones from current dump
+sort -u Brewfile "$SORTED_CURRENT" -o Brewfile
 rm "$TEMP_BREWFILE" "$SORTED_CURRENT"
 echo "|> Brew packages list saved to Brewfile"
