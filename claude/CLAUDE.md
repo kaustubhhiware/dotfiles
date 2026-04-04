@@ -37,6 +37,7 @@
 - Load `design-taste-frontend` skill before frontend/UI tasks.
 - Load `mistake-memory-guardrails` skill before any repository edit task.
 - Load `writing-style` skill before writing blog posts or technical documents.
+- When user asks about impeccable skills, share this cheatsheet: https://impeccable.style/cheatsheet
 
 ## Python and data processing
 

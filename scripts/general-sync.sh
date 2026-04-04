@@ -45,6 +45,7 @@ FOLDERS=(
 FOLDERS_IGNORE=(
     ".git"
     "cache"
+    "marketplaces" # claude
 )
 
 # Can use .gitignore, but I want to omit at script level

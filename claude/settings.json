@@ -18,9 +18,15 @@
       "Bash(ls:*)",
       "Bash(npm test)",
       "Bash(make test)",
-      "Bash(python3 -m pytest tests/test_api.py::TestNewSession::test_session_is_created -x)"
+      "Bash(python3 -m pytest tests/test_api.py::TestNewSession::test_session_is_created -x)",
+      "Bash(uv add:*)",
+      "Bash(uv pip:*)",
+      "Skill(security-reviewer:*)",
+      "Bash(git log:*)",
     ],
     "deny": [
+      "Bash(rm -rf:*)",
+      "Bash(sudo:*)",
       "Read(./.env)",
       "Read(./.env.*)",
       "Read(./secrets/**)"
@@ -152,13 +158,21 @@
   },
   "enabledPlugins": {
     "skill-creator@claude-plugins-official": true,
-    "superpowers@claude-plugins-official": true
+    "superpowers@claude-plugins-official": true,
+    "context7@claude-plugins-official": true,
+    "impeccable@impeccable": true
   },
   "extraKnownMarketplaces": {
     "superpowers-marketplace": {
       "source": {
         "source": "github",
         "repo": "obra/superpowers-marketplace"
+      }
+    },
+    "impeccable": {
+      "source": {
+        "source": "github",
+        "repo": "pbakaus/impeccable"
       }
     }
   }
