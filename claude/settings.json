@@ -1,4 +1,9 @@
 {
+  "env": {
+    // "CLAUDE_CODE_USE_VERTEX": "1",
+    // "ANTHROPIC_VERTEX_REGION": "asia-east1",
+    "CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING": "1"
+  },
   "permissions": {
     "allow": [
       "Bash(npm run lint)",
@@ -18,11 +23,9 @@
       "Bash(ls:*)",
       "Bash(npm test)",
       "Bash(make test)",
-      "Bash(python3 -m pytest tests/test_api.py::TestNewSession::test_session_is_created -x)",
       "Bash(uv add:*)",
-      "Bash(uv pip:*)",
       "Skill(security-reviewer:*)",
-      "Bash(git log:*)",
+      "Bash(git log:*)"
     ],
     "deny": [
       "Bash(rm -rf:*)",
@@ -175,5 +178,6 @@
         "repo": "pbakaus/impeccable"
       }
     }
-  }
+  },
+  "showThinkingSummaries": true
 }
