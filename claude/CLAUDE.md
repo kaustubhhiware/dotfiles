@@ -60,3 +60,7 @@
 - Whenever possible, run API calls in parallel. Check with the user for this.
 - When processing large files, if the function writes into a file, you should write to an output file periodically (every 100 rows or so) instead of all at once at the end.
 - When using string matching, always use regex over trivial for loops.
+
+<!-- OMC:IMPORT:START -->
+@CLAUDE-omc.md
+<!-- OMC:IMPORT:END -->

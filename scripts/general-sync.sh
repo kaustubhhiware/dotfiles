@@ -39,6 +39,7 @@ FOLDERS=(
     ".config/bat:bat"
     ".config/fish:fish"
     ".config/ghostty:ghostty"
+    ".config/cmux:cmux"
     ".config/raycast/scripts:raycast/scripts"
 )
 
@@ -55,6 +56,8 @@ IGNORE_FILES=(
     "mat.fish"
     "pat.fish"
     ".state.json" # peon
+    "install-counts-cache.json" # claude
+    "installed_plugins.json" # claude
 )
 
 has_ignored_component() {

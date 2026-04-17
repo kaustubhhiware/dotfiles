@@ -1,183 +1,105 @@
 {
-  "env": {
-    // "CLAUDE_CODE_USE_VERTEX": "1",
-    // "ANTHROPIC_VERTEX_REGION": "asia-east1",
-    "CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING": "1"
+  "enabledPlugins": {
+    "context7@claude-plugins-official": true,
+    "impeccable@impeccable": true,
+    "oh-my-claudecode@omc": true,
+    "skill-creator@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true
   },
-  "permissions": {
-    "allow": [
-      "Bash(npm run lint)",
-      "Bash(git rev-parse:*)",
-      "Bash(ruff check:*)",
-      "Bash(ruff format:*)",
-      "Bash(uv run ruff:*)",
-      "Bash(uv run python:*)",
-      "WebSearch",
-      "WebFetch(domain:github.com)",
-      "WebFetch(domain:raw.githubusercontent.com)",
-      "WebFetch(domain:api.github.com)",
-      "Bash(curl:*)",
-      "Bash(GIT_EDITOR=true git diff:*)",
-      "Bash(GIT_EDITOR=true git status:*)",
-      "Bash(GIT_EDITOR=true git log:*)",
-      "Bash(ls:*)",
-      "Bash(npm test)",
-      "Bash(make test)",
-      "Bash(uv add:*)",
-      "Skill(security-reviewer:*)",
-      "Bash(git log:*)"
-    ],
-    "deny": [
-      "Bash(rm -rf:*)",
-      "Bash(sudo:*)",
-      "Read(./.env)",
-      "Read(./.env.*)",
-      "Read(./secrets/**)"
-    ],
-    "defaultMode": "default"
+  "env": {
+    // "ANTHROPIC_VERTEX_PROJECT_ID": "lol-you-wish",
+    // "ANTHROPIC_VERTEX_REGION": "asia-east1",
+    "CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING": "1",
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+    // "CLAUDE_CODE_USE_VERTEX": "1"
+  },
+  "extraKnownMarketplaces": {
+    "impeccable": {
+      "source": {
+        "repo": "pbakaus/impeccable",
+        "source": "github"
+      }
+    },
+    "omc": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/Yeachan-Heo/oh-my-claudecode.git"
+      }
+    },
+    "superpowers-marketplace": {
+      "source": {
+        "repo": "obra/superpowers-marketplace",
+        "source": "github"
+      }
+    }
   },
   "hooks": {
-    "SessionStart": [
+    "PostToolUse": [
       {
-        "matcher": "",
         "hooks": [
           {
-            "type": "command",
-            "command": "/Users/kaustubh/.claude/hooks/peon-ping/peon.sh",
-            "timeout": 10
+            "command": "~/.claude/hooks/cmux-notify.sh",
+            "type": "command"
           }
-        ]
-      }
-    ],
-    "SessionEnd": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/Users/kaustubh/.claude/hooks/peon-ping/peon.sh",
-            "timeout": 10,
-            "async": true
-          }
-        ]
-      }
-    ],
-    "SubagentStart": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/Users/kaustubh/.claude/hooks/peon-ping/peon.sh",
-            "timeout": 10,
-            "async": true
-          }
-        ]
-      }
-    ],
-    "UserPromptSubmit": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/Users/kaustubh/.claude/hooks/peon-ping/peon.sh",
-            "timeout": 10,
-            "async": true
-          }
-        ]
+        ],
+        "matcher": "Task"
       }
     ],
     "Stop": [
       {
-        "matcher": "",
         "hooks": [
           {
-            "type": "command",
-            "command": "/Users/kaustubh/.claude/hooks/peon-ping/peon.sh",
-            "timeout": 10,
-            "async": true
+            "command": "~/.claude/hooks/cmux-notify.sh",
+            "type": "command"
           }
-        ]
-      }
-    ],
-    "Notification": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/Users/kaustubh/.claude/hooks/peon-ping/peon.sh",
-            "timeout": 10,
-            "async": true
-          }
-        ]
-      }
-    ],
-    "PermissionRequest": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/Users/kaustubh/.claude/hooks/peon-ping/peon.sh",
-            "timeout": 10,
-            "async": true
-          }
-        ]
-      }
-    ],
-    "PostToolUseFailure": [
-      {
-        "matcher": "Bash",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/Users/kaustubh/.claude/hooks/peon-ping/peon.sh",
-            "timeout": 10,
-            "async": true
-          }
-        ]
-      }
-    ],
-    "PreCompact": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/Users/kaustubh/.claude/hooks/peon-ping/peon.sh",
-            "timeout": 10,
-            "async": true
-          }
-        ]
+        ],
+        "matcher": ""
       }
     ]
   },
+  "permissions": {
+    "allow": [
+      "Bash(GIT_EDITOR=true git diff:*)",
+      "Bash(GIT_EDITOR=true git log:*)",
+      "Bash(GIT_EDITOR=true git status:*)",
+      "Bash(curl:*)",
+      "Bash(git log:*)",
+      "Bash(git rev-parse:*)",
+      "Bash(ls:*)",
+      "Bash(make test)",
+      "Bash(npm run lint)",
+      "Bash(npm test)",
+      "Bash(ruff check:*)",
+      "Bash(ruff format:*)",
+      "Bash(uv add:*)",
+      "Bash(uv run python:*)",
+      "Bash(uv run ruff:*)",
+      "Skill(security-reviewer:*)",
+      "WebFetch(domain:api.github.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebSearch"
+    ],
+    "defaultMode": "default",
+    "deny": [
+      "Bash(rm -rf:*)",
+      "Bash(sudo:*)",
+      "Edit(.env)",
+      "Read(./.env.*)",
+      "Read(./secrets/**)",
+      "Read(.env)"
+    ]
+  },
+  "showThinkingSummaries": true,
   "statusLine": {
-    "type": "command",
+    "_description": "this statusline version by default",
     "command": "npx -y ccstatusline@latest",
-    "padding": 0
+    "padding": 0,
+    "type": "command"
   },
-  "enabledPlugins": {
-    "skill-creator@claude-plugins-official": true,
-    "superpowers@claude-plugins-official": true,
-    "context7@claude-plugins-official": true,
-    "impeccable@impeccable": true
-  },
-  "extraKnownMarketplaces": {
-    "superpowers-marketplace": {
-      "source": {
-        "source": "github",
-        "repo": "obra/superpowers-marketplace"
-      }
-    },
-    "impeccable": {
-      "source": {
-        "source": "github",
-        "repo": "pbakaus/impeccable"
-      }
-    }
-  },
-  "showThinkingSummaries": true
+  "statusLine2": {
+    "_description": "this statusline version when using omc",
+    "command": "node ${CLAUDE_CONFIG_DIR:-$HOME/.claude}/hud/omc-hud.mjs",
+    "type": "command"
+  }
 }

@@ -11,6 +11,18 @@ BOSSMAN=<redacted> ./scripts/general-sync.sh          # full sync
 BOSSMAN=<redacted> ./scripts/general-sync.sh --step4  # conflicts only (-4 also works)
 ```
 
+<details>
+<summary>Few commands to keep things running</summary>
+
+```sh
+jq 'walk(if type == "object" then to_entries | sort_by(.key) | from_entries elif type == "array" then sort else . end)' ~/.claude/settings.json | sponge ~/.claude/settings.json
+
+chmod +x ~/.claude/hooks/cmux-notify.sh
+
+```
+
+</details>
+
 ![images/Screenshot_2026-02-22_at_1.07.54 PM.png](images/Screenshot_2026-02-22_at_1.07.54 PM.png)
 
 ## Note: Linux
