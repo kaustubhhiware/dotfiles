@@ -58,7 +58,9 @@ IGNORE_FILES=(
     ".state.json" # peon
     "install-counts-cache.json" # claude
     "installed_plugins.json" # claude
+    "project-memory.json" # claude
 )
+
 
 has_ignored_component() {
     local path="$1"
