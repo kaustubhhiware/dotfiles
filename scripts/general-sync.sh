@@ -37,6 +37,7 @@ FOLDERS=(
     ".claude/plugins:claude/plugins"
     ".claude/skills:claude/skills"
     ".config/bat:bat"
+    ".config/fastfetch:fastfetch"
     ".config/fish:fish"
     ".config/ghostty:ghostty"
     ".config/cmux:cmux"
