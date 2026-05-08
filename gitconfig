@@ -1,56 +1,73 @@
-[user]
-	name = Kaustubh Hiware
-	email = hiwarekaustubh@gmail.com
-	# signingkey = <key>
-[push]
-	default = simple
-[pull]
-	rebase = false
-[url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
+[branch]
+	sort = -committerdate
+
+[color]
+	ui = true
+
+[color "branch"]
+	current = magenta
+	local = default
+	plain = blue
+	remote = yellow
+	upstream = green
+
+[color "decorate"]
+	branch = blue
+	HEAD = red
+	remoteBranch = magenta
+	tag = yellow
+
+[color "diff-highlight"]
+	newHighlight = green bold 22
+	newNormal = green bold
+	oldHighlight = red bold 52
+	oldNormal = red bold
+
+[color "diff"]
+	commit = yellow bold
+	frag = magenta bold
+	func = 146 bold
+	meta = 11
+	new = green bold
+	old = red bold
+	whitespace = red reverse
+
+[commit]
+	gpgsign = true
 
 [core]
 	editor = nano
 	pager = diff-so-fancy | less --tabs=4 -RFX
-[commit]
-	gpgsign = true
-[gpg]
-	program = gpg
-[interactive]
-	diffFilter = diff-so-fancy --patch
-[color]
-	ui = true
-[color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
-[color "diff"]
-	meta = 11
-	frag = magenta bold
-	func = 146 bold
-	commit = yellow bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
+
 [diff]
 	tool = vscode
+
 [difftool "vscode"]
 	cmd = "code --wait --diff  "
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	process = git-lfs filter-process
+	required = true
+	smudge = git-lfs smudge -- %f
+
+[gpg]
+	program = gpg
+
+[interactive]
+	diffFilter = diff-so-fancy --patch
 
 [log]
 	abbrevCommit = true
 	graphColors = blue,yellow,cyan,magenta,green,red
-[branch]
-	sort = -committerdate
-[color "decorate"]
-	HEAD = red
-	branch = blue
-	tag = yellow
-	remoteBranch = magenta
-[color "branch"]
-	current = magenta
-	local = default
-	remote = yellow
-	upstream = green
-	plain = blue
+
+[pull]
+	rebase = false
+
+[push]
+	default = simple
+
+[user]
+	email = hiwarekaustubh@gmail.com
+	name = Kaustubh Hiware
+	signingkey = FB47269B5E48B933
