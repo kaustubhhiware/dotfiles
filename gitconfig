@@ -67,6 +67,9 @@
 [push]
 	default = simple
 
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+
 [user]
 	email = hiwarekaustubh@gmail.com
 	name = Kaustubh Hiware

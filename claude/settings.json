@@ -2,28 +2,18 @@
   "enabledPlugins": {
     "context7@claude-plugins-official": true,
     "impeccable@impeccable": true,
-    "oh-my-claudecode@omc": true,
     "skill-creator@claude-plugins-official": true,
     "superpowers@claude-plugins-official": true
   },
   "env": {
-    // "ANTHROPIC_VERTEX_PROJECT_ID": "lol-you-wish",
-    // "ANTHROPIC_VERTEX_REGION": "asia-east1",
     "CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING": "1",
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
-    // "CLAUDE_CODE_USE_VERTEX": "1"
   },
   "extraKnownMarketplaces": {
     "impeccable": {
       "source": {
         "repo": "pbakaus/impeccable",
         "source": "github"
-      }
-    },
-    "omc": {
-      "source": {
-        "source": "git",
-        "url": "https://github.com/Yeachan-Heo/oh-my-claudecode.git"
       }
     },
     "superpowers-marketplace": {
@@ -34,22 +24,131 @@
     }
   },
   "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "async": true,
+            "command": "/Users/kaustubh/.claude/hooks/peon-ping/peon.sh",
+            "timeout": 10,
+            "type": "command"
+          }
+        ],
+        "matcher": ""
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "hooks": [
+          {
+            "async": true,
+            "command": "/Users/kaustubh/.claude/hooks/peon-ping/peon.sh",
+            "timeout": 10,
+            "type": "command"
+          }
+        ],
+        "matcher": ""
+      }
+    ],
     "PostToolUse": [
       {
         "hooks": [
           {
-            "command": "~/.claude/hooks/cmux-notify.sh",
+            "command": "/Users/kaustubh/.claude/hooks/cmux-notify.sh",
             "type": "command"
           }
         ],
         "matcher": "Task"
       }
     ],
+    "PostToolUseFailure": [
+      {
+        "hooks": [
+          {
+            "async": true,
+            "command": "/Users/kaustubh/.claude/hooks/peon-ping/peon.sh",
+            "timeout": 10,
+            "type": "command"
+          }
+        ],
+        "matcher": "Bash"
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "async": true,
+            "command": "/Users/kaustubh/.claude/hooks/peon-ping/peon.sh",
+            "timeout": 10,
+            "type": "command"
+          }
+        ],
+        "matcher": ""
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "async": true,
+            "command": "/Users/kaustubh/.claude/hooks/peon-ping/peon.sh",
+            "timeout": 10,
+            "type": "command"
+          }
+        ],
+        "matcher": ""
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "command": "/Users/kaustubh/.claude/hooks/peon-ping/peon.sh",
+            "timeout": 10,
+            "type": "command"
+          }
+        ],
+        "matcher": ""
+      }
+    ],
     "Stop": [
       {
         "hooks": [
           {
-            "command": "~/.claude/hooks/cmux-notify.sh",
+            "async": true,
+            "command": "/Users/kaustubh/.claude/hooks/peon-ping/peon.sh",
+            "timeout": 10,
+            "type": "command"
+          },
+          {
+            "command": "/Users/kaustubh/.claude/hooks/cmux-notify.sh",
+            "type": "command"
+          }
+        ],
+        "matcher": ""
+      }
+    ],
+    "SubagentStart": [
+      {
+        "hooks": [
+          {
+            "async": true,
+            "command": "/Users/kaustubh/.claude/hooks/peon-ping/peon.sh",
+            "timeout": 10,
+            "type": "command"
+          }
+        ],
+        "matcher": ""
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "async": true,
+            "command": "/Users/kaustubh/.claude/hooks/peon-ping/peon.sh",
+            "timeout": 10,
             "type": "command"
           }
         ],
@@ -57,30 +156,34 @@
       }
     ]
   },
+  "model": "claude-sonnet-4-6",
   "permissions": {
     "allow": [
       "Bash(GIT_EDITOR=true git diff:*)",
       "Bash(GIT_EDITOR=true git log:*)",
       "Bash(GIT_EDITOR=true git status:*)",
       "Bash(curl:*)",
+      "Bash(gh pr *)",
       "Bash(git log:*)",
       "Bash(git rev-parse:*)",
+      "Bash(go test:*)",
       "Bash(ls:*)",
       "Bash(make test)",
       "Bash(npm run lint)",
       "Bash(npm test)",
+      "Bash(rg:*)",
       "Bash(ruff check:*)",
       "Bash(ruff format:*)",
       "Bash(uv add:*)",
       "Bash(uv run python:*)",
       "Bash(uv run ruff:*)",
+      "Skill(security-review:*)",
       "Skill(security-reviewer:*)",
       "WebFetch(domain:api.github.com)",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:raw.githubusercontent.com)",
       "WebSearch"
     ],
-    "defaultMode": "default",
     "deny": [
       "Bash(rm -rf:*)",
       "Bash(sudo:*)",
@@ -91,15 +194,10 @@
     ]
   },
   "showThinkingSummaries": true,
+  "skillListingBudgetFraction": 0.05,
   "statusLine": {
-    "_description": "this statusline version by default",
     "command": "npx -y ccstatusline@latest",
     "padding": 0,
-    "type": "command"
-  },
-  "statusLine2": {
-    "_description": "this statusline version when using omc",
-    "command": "node ${CLAUDE_CONFIG_DIR:-$HOME/.claude}/hud/omc-hud.mjs",
     "type": "command"
   }
 }

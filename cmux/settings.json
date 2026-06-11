@@ -78,7 +78,7 @@
   //     "lightModeTintColor" : null,
       "matchTerminalBackground" : true,
       // "tintColor" : "#000000",
-  //     "tintOpacity" : 0.17999999999999999
+      // "tintOpacity" : 0.17999999999999999
     },
 
     "automation" : {
