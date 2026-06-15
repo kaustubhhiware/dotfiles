@@ -56,10 +56,16 @@ IGNORE_FILES=(
     "kprod.fish"
     "mat.fish"
     "pat.fish"
-    ".state.json" # peon
-    "install-counts-cache.json" # claude
-    "installed_plugins.json" # claude
-    "project-memory.json" # claude
+    # claude
+    ".last_inuse_sweep"
+    ".last_update_check"
+    "install-counts-cache.json"
+    "installed_plugins.json"
+    "project-memory.json"
+    # peon
+    ".sound.pid"
+    ".state.json"
+    "meeting-detect"
 )
 
 

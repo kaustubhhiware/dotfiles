@@ -1,3 +1,3 @@
-function auth -d 'gcloud auth'
-    gcloud auth application-default login
+function auth -d 'alias for `gcloud auth login`'
+    gcloud auth login
 end
