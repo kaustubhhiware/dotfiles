@@ -20,12 +20,30 @@ This skill is an addendum to [`frontend-slides`](https://github.com/zarazhangrui
 
 ---
 
-## Slide Numbers
+## Slide Footer (Every Slide)
 
-- Every slide has `<div class="slide-number">`.
-- Format: **zero-padded two digits** — `01`, `02`, `03`. Never `1/12` or `1 of 12`.
-- Position: `bottom: 52px; right: 76px` — bottom-right corner of the 1920×1080 stage.
-- Style: weight 300, `20px`, `letter-spacing: 0.1em`, `color: var(--chalk-faint)` / `var(--ink-faint)`.
+Every slide has two footer elements on the same baseline — same font, size, weight, color, and vertical position:
+
+```html
+<div class="slide-event">JSConf · 2026.06.15</div>
+<div class="slide-number">01</div>
+```
+
+```css
+.slide-event, .slide-number {
+    position: absolute;
+    bottom: 52px;
+    font-weight: 300;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    color: var(--chalk-faint); /* or --ink-faint */
+}
+.slide-event  { left: 76px; }
+.slide-number { right: 76px; }
+```
+
+- Slide number format: **zero-padded two digits** — `01`, `02`, `03`. Never `1/12` or `1 of 12`.
+- Event name format: matches the identity block — `Event Name · YYYY.MM.DD`.
 
 ---
 
@@ -287,3 +305,14 @@ Inactive items use `var(--ink-faint)`. Active item uses full `var(--ink)`. A `.g
 ## Color Philosophy
 
 Colors are context-driven, not aesthetic defaults. When choosing a color scheme for a new deck, ask about real-world context: outfit, venue lighting, event brand, audience. A new context may warrant a new palette entirely.
+
+---
+
+## Markdown Conversion
+
+When the user provides a markdown file to convert into slides:
+
+- **Never rewrite the user's words.** Use the exact sentences, phrases, and wording from the source file — verbatim. Do not paraphrase, condense, or "improve" the copy.
+- It is fine to generate `arc-label-text` (section breadcrumbs) since those are navigation chrome, not content.
+- Slide splits are defined by `---` in the markdown. Each `---` = one slide boundary. Do not merge, re-split, or second-guess the user's slide breaks.
+- Choosing the layout template for each slide is yours to decide — the words inside are not.
