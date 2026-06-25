@@ -1,13 +1,17 @@
 {
+  "_effortLevel": "low",
   "enabledPlugins": {
     "context7@claude-plugins-official": true,
-    "impeccable@impeccable": true,
     "frontend-design@claude-plugins-official": true,
     "gopls-lsp@claude-plugins-official": true,
+    "impeccable@impeccable": true,
     "skill-creator@claude-plugins-official": true,
     "superpowers@claude-plugins-official": true
   },
   "env": {
+    "_ANTHROPIC_BASE_URL": "https://openrouter.ai/api",
+    "_ANTHROPIC_AUTH_TOKEN": "<get-your-own>",
+    "_ANTHROPIC_API_KEY": "",
     "CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING": "1",
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
   },
@@ -201,5 +205,6 @@
     "command": "npx -y ccstatusline@latest",
     "padding": 0,
     "type": "command"
-  }
+  },
+  "theme": "dark-ansi"
 }

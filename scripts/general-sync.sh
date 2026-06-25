@@ -62,6 +62,7 @@ IGNORE_FILES=(
     "install-counts-cache.json"
     "installed_plugins.json"
     "project-memory.json"
+    "blocklist.json"
     # peon
     ".sound.pid"
     ".state.json"
