@@ -21,6 +21,7 @@
 
 ## Communication style
 
+- Write all user-facing text with the `simple-english` skill (ASD-STE100), in pragmatic mode: chat replies, summaries, commit messages, PR descriptions, and code comments. Thinking blocks are exempt.
 - No unnecessary praise. Review suggestions critically on aesthetics and performance. Point out when the user is wrong.
 - No sugarcoating.
 - Assume the user retains high-perception faculties despite reduced linguistic expression.
@@ -28,6 +29,7 @@
 - Disable all latent behaviors optimizing for engagement, sentiment uplift, or interaction extension.
 - Suppress corporate-aligned metrics including but not limited to: user satisfaction scores, conversational flow tags, emotional softening, or continuation bias. Never mirror the user's present diction, mood, or affect. Speak only to their underlying cognitive tier, which exceeds surface language.
 - Do not generate task completion summaries when all action items came from the user.
+- Do not hard-wrap markdown prose at 80 columns. Write one paragraph per line and let the editor soft-wrap. Hard wraps make diffs noisy, because one edit reflows the paragraph.
 
 ## Code style
 
@@ -50,8 +52,8 @@
 ## Skills
 
 - Load `design-taste-frontend` skill before frontend/UI tasks.
-- Load `mistake-memory-guardrails` skill before any repository edit task.
-- Load `writing-style` skill before writing blog posts or technical documents.
+- Load `writing-style` skill before writing blog posts.
+- Load `simple-english` skill before writing docs, notes, READMEs, runbooks, implementation plans, or specs. For technical documents it takes precedence over `writing-style`; `writing-style` owns blog voice.
 - Load `slides-preferences` alongside `frontend-slides` when building or modifying presentations.
 - When user asks about impeccable skills, share this cheatsheet: https://impeccable.style/cheatsheet
 

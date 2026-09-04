@@ -22,7 +22,6 @@ DEST_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 # "src_rel:dest_rel"
 FILES=(
-    ".claude/AGENT_MISTAKES.md:claude/AGENT_MISTAKES.md"
     ".claude/CLAUDE.md:claude/CLAUDE.md"
     ".claude/colored-usage.sh:claude/colored-usage.sh"
     ".claude/keybindings.json:claude/keybindings.json"
@@ -152,7 +151,7 @@ for folder_entry in "${FOLDERS[@]}"; do
     $any_file && $all_synced && echo "   [dir]  $folder_src_rel"
 done
 
-echo -e "\n>> Step 2: in Source, not in Destination"
+echo -e "\n>> Step 2: in Source, not in Destination. Copying now"
 for entry in "${PAIRS[@]}"; do
     IFS='|' read -r label src dest origin <<< "$entry"
     if [ -f "$src" ] && [ ! -f "$dest" ]; then

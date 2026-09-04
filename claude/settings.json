@@ -1,4 +1,8 @@
 {
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
   "enabledPlugins": {
     "context7@claude-plugins-official": true,
     "impeccable@impeccable": true,
@@ -164,27 +168,37 @@
       "Bash(GIT_EDITOR=true git diff:*)",
       "Bash(GIT_EDITOR=true git log:*)",
       "Bash(GIT_EDITOR=true git status:*)",
+      "Bash(cat)",
+      "Bash(cd:*)",
       "Bash(curl:*)",
+      "Bash(find *)",
       "Bash(gh pr *)",
       "Bash(git log:*)",
       "Bash(git rev-parse:*)",
       "Bash(go test:*)",
       "Bash(ls:*)",
+      "Bash(make build *)",
+      "Bash(make build)",
+      "Bash(make lint)",
       "Bash(make test)",
       "Bash(npm run lint)",
       "Bash(npm test)",
       "Bash(rg:*)",
+      "Bash(rg *)",
       "Bash(ruff check:*)",
       "Bash(ruff format:*)",
       "Bash(uv add:*)",
       "Bash(uv run python:*)",
       "Bash(uv run ruff:*)",
+      "Read(//Users/kaustubh/.claude/plans/**)",
       "Skill(security-review:*)",
       "Skill(security-reviewer:*)",
       "WebFetch(domain:api.github.com)",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:raw.githubusercontent.com)",
-      "WebSearch"
+      "WebSearch",
+      "mcp__claude_ai_Notion",
+      "mcp__claude_ai_Sourcegraph"
     ],
     "deny": [
       "Bash(rm -rf:*)",
@@ -201,5 +215,6 @@
     "command": "npx -y ccstatusline@latest",
     "padding": 0,
     "type": "command"
-  }
+  },
+  "theme": "dark"
 }
