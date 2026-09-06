@@ -10,21 +10,21 @@ brew "cmatrix"
 brew "colordiff"
 brew "coreutils"
 brew "cowsay"
-brew "cue-lang/tap/cue"
+brew "cue-lang/tap/cue", trusted: true
 brew "cue"
 brew "curl"
 brew "datadog-labs/pack/pup", trusted: true
-brew "derailed/k9s/k9s"
+brew "derailed/k9s/k9s", trusted: true
 brew "diff-so-fancy"
 brew "diffutils"
 brew "direnv"
-brew "docker-compose"
+brew "docker-compose", link: false
 brew "docker"
 brew "eza"
 brew "ezstream"
 brew "fastfetch"
 brew "fd"
-brew "felixkratz/formulae/borders"
+brew "felixkratz/formulae/borders", trusted: true
 brew "ffmpeg"
 brew "figlet"
 brew "fish"
@@ -55,7 +55,7 @@ brew "imagemagick"
 brew "jd"
 brew "jq"
 brew "kind"
-brew "ktr0731/evans/evans"
+brew "ktr0731/evans/evans", trusted: true
 brew "kubectx"
 brew "kubernetes-cli"
 brew "kustomize"
@@ -66,7 +66,7 @@ brew "libtool"
 brew "libyaml"
 brew "lolcat"
 brew "make"
-brew "mongodb/brew/mongodb-community"
+brew "mongodb/brew/mongodb-community", trusted: true
 brew "mongosh"
 brew "neofetch"
 brew "nghttp2"
@@ -75,7 +75,7 @@ brew "node@14"
 brew "nvm"
 brew "openldap"
 brew "pandoc"
-brew "peonping/tap/peon-ping"
+brew "peonping/tap/peon-ping", trusted: true
 brew "pgcli"
 brew "php"
 brew "pinentry-mac"
@@ -164,10 +164,14 @@ go "golang.org/x/vuln/cmd/govulncheck"
 go "honnef.co/go/tools/cmd/staticcheck"
 npm "@anthropic-ai/claude-code"
 npm "corepack"
+npm "gatsby-cli"
+npm "gtop"
+npm "typescript"
 tap "aquaproj/aqua", trusted: true
 tap "cue-lang/tap", trusted: true
 tap "datadog-labs/pack"
 tap "derailed/k9s", trusted: true
+tap "felixkratz/formulae"
 tap "felixkratz/formulae", trusted: true
 tap "hashicorp/tap"
 tap "homebrew/services"
@@ -176,6 +180,7 @@ tap "ktr0731/evans", trusted: true
 tap "manaflow-ai/cmux", trusted: true
 tap "mongodb/brew", trusted: true
 tap "peonping/tap", trusted: true
+tap "theboredteam/boring-notch", "https://github.com/TheBoredTeam/homebrew-boring-notch", trusted: true
 vscode "aaron-bond.better-comments"
 vscode "acarreiro.calculate"
 vscode "alexcvzz.vscode-sqlite"

@@ -3,6 +3,7 @@
     "commit": "",
     "pr": ""
   },
+  "effortLevel": "high",
   "enabledPlugins": {
     "context7@claude-plugins-official": true,
     "frontend-design@claude-plugins-official": true,
@@ -12,9 +13,9 @@
     "superpowers@claude-plugins-official": true
   },
   "env": {
+    "_ANTHROPIC_API_KEY": "",
     "_ANTHROPIC_BASE_URL": "https://openrouter.ai/api",
     "_ANTHROPIC_AUTH_TOKEN": "<get-your-own>",
-    "_ANTHROPIC_API_KEY": "",
     "CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING": "1",
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
   },
@@ -194,8 +195,6 @@
       "Bash(uv run python:*)",
       "Bash(uv run ruff:*)",
       "Read(//Users/kaustubh/.claude/plans/**)",
-      "Skill(security-review:*)",
-      "Skill(security-reviewer:*)",
       "WebFetch(domain:api.github.com)",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:raw.githubusercontent.com)",
